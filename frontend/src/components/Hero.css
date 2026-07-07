@@ -1,0 +1,438 @@
+.hero-section {
+  background: #f8f9fa;
+  color: #222222;
+  /* Tighter bottom padding helps the Hero finish naturally before the next section. */
+  padding: 38px 24px 54px;
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  /* Start alignment keeps the badges and first card visually level. */
+  align-items: start;
+  gap: 50px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.hero-content {
+  text-align: left;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* A consistent chip height keeps wrapped badges looking intentional. */
+  min-height: 48px;
+  gap: 11px;
+  padding: 8px 17px 8px 9px;
+  border: 1px solid rgba(46, 125, 50, 0.13);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  /* Softer layered shadows make the chips feel premium without looking heavy. */
+  box-shadow:
+    0 12px 28px rgba(17, 24, 39, 0.07),
+    0 3px 8px rgba(46, 125, 50, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  color: #263238;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.hero-badge:hover {
+  /* A small lift confirms the badge is interactive-feeling while staying calm. */
+  transform: translateY(-2px);
+  border-color: rgba(46, 125, 50, 0.22);
+  background: #ffffff;
+  box-shadow:
+    0 16px 34px rgba(17, 24, 39, 0.1),
+    0 5px 12px rgba(46, 125, 50, 0.08);
+}
+
+.hero-badge-icon {
+  display: inline-grid;
+  place-items: center;
+  /* The colored circle separates the icon from the text and improves scan speed. */
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(46, 125, 50, 0.14), rgba(25, 118, 210, 0.1));
+  color: #2e7d32;
+  font-size: 0.9rem;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+.hero-content h1 {
+  max-width: 640px;
+  margin: 0 0 18px;
+  color: #222222;
+  font-size: clamp(2.25rem, 3.7vw, 4rem);
+  line-height: 1.06;
+  font-weight: 800;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.03rem;
+  line-height: 1.68;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+.hero-button-primary {
+  background: #2e7d32;
+  color: #ffffff;
+  box-shadow: 0 14px 28px rgba(46, 125, 50, 0.22);
+}
+
+.hero-button-primary:hover {
+  background: #256629;
+  box-shadow: 0 18px 34px rgba(46, 125, 50, 0.28);
+}
+
+.hero-button-secondary {
+  background: #ffffff;
+  color: #1976d2;
+  border: 1px solid rgba(25, 118, 210, 0.2);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.08);
+}
+
+.hero-button-secondary:hover {
+  color: #125ca5;
+  border-color: rgba(25, 118, 210, 0.36);
+}
+
+.hero-training-link {
+  display: inline-flex;
+  margin-top: 14px;
+  color: #1976d2;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.hero-training-link:hover {
+  color: #0f5132;
+}
+
+.hero-trust-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-content: start;
+  /* The strip keeps the left-column width while extra height lines it up with the right card stack. */
+  min-height: 250px;
+  margin-top: 24px;
+  padding: 18px 18px 70px;
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.07);
+}
+
+.hero-trust-kicker {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+  color: #2e7d32;
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.hero-trust-item {
+  display: grid;
+  align-content: center;
+  min-height: 86px;
+  padding: 14px 12px;
+  border: 1px solid rgba(17, 24, 39, 0.07);
+  border-radius: 8px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.05);
+}
+
+.hero-trust-item strong {
+  color: #111827;
+  font-size: 1.35rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.hero-trust-item span {
+  margin-top: 7px;
+  color: #4b5563;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.hero-card-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  align-items: start;
+  /* Tiny top offset visually aligns the first card with the badge row. */
+  padding-top: 2px;
+}
+
+.hero-card {
+  overflow: hidden;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 36px rgba(17, 24, 39, 0.09);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.hero-card:hover {
+  /* The hover lift is subtle so the cards feel interactive without becoming distracting. */
+  transform: translateY(-4px);
+  border-color: rgba(46, 125, 50, 0.18);
+  box-shadow: 0 22px 48px rgba(17, 24, 39, 0.13);
+}
+
+.hero-card:nth-child(1) {
+  grid-column: 1 / 5;
+}
+
+.hero-card:nth-child(2) {
+  grid-column: 3 / 7;
+}
+
+.hero-card:nth-child(3) {
+  grid-column: 1 / 5;
+}
+
+.hero-card-image {
+  display: flex;
+  align-items: flex-end;
+  min-height: 138px;
+  padding: 16px;
+  background:
+    linear-gradient(135deg, rgba(46, 125, 50, 0.88), rgba(25, 118, 210, 0.82)),
+    #dbeafe;
+}
+
+.hero-card-image span {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #222222;
+  padding: 7px 11px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.hero-card-image-2 {
+  background:
+    linear-gradient(135deg, rgba(25, 118, 210, 0.86), rgba(46, 125, 50, 0.72)),
+    #e8f1fb;
+}
+
+.hero-card-image-3 {
+  background:
+    linear-gradient(135deg, rgba(34, 34, 34, 0.78), rgba(46, 125, 50, 0.82)),
+    #e8f5e9;
+}
+
+.hero-card-body {
+  padding: 18px;
+}
+
+.hero-card-body h2 {
+  margin: 0 0 7px;
+  color: #222222;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.hero-card-body p {
+  margin: 0;
+  color: #5f6b7a;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.hero-mission {
+  grid-column: 1 / -1;
+  width: min(980px, 100%);
+  margin: 6px auto 0;
+  padding: 24px 30px;
+  border: 1px solid rgba(46, 125, 50, 0.1);
+  border-radius: 8px;
+  /* A quiet green tint gives the Hero a clear ending without looking like a new page section. */
+  background: #eef7f0;
+  text-align: center;
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.06);
+}
+
+.hero-mission p {
+  max-width: 860px;
+  margin: 0 auto;
+  color: #2f3f35;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 34px 22px 48px;
+  }
+
+  .hero-container {
+    gap: 30px;
+  }
+
+  .hero-card-grid {
+    gap: 14px;
+  }
+
+  .hero-card-image {
+    min-height: 120px;
+  }
+
+  /* Tablet keeps the two-column Hero but trims card/stat spacing to prevent crowding. */
+  .hero-trust-strip {
+    min-height: 210px;
+    gap: 10px;
+    padding: 14px 14px 48px;
+  }
+
+  .hero-trust-item {
+    min-height: 76px;
+    padding: 11px 8px;
+  }
+
+  .hero-trust-item strong {
+    font-size: 1.18rem;
+  }
+
+  .hero-trust-item span {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-section {
+    padding: 30px 18px 42px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .hero-badges {
+    gap: 9px;
+    margin-bottom: 20px;
+  }
+
+  .hero-actions,
+  .hero-button {
+    width: 100%;
+  }
+
+  .hero-trust-strip {
+    /* Two equal columns make four stats balanced on narrow screens. */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: auto;
+    gap: 10px;
+    padding: 12px;
+    margin-top: 20px;
+  }
+
+  .hero-card-grid {
+    grid-template-columns: 1fr;
+    padding-top: 8px;
+  }
+
+  .hero-trust-strip {
+    margin-top: 20px;
+  }
+
+  .hero-card:nth-child(1),
+  .hero-card:nth-child(2),
+  .hero-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .hero-mission {
+    padding: 22px 18px;
+  }
+
+  .hero-mission p {
+    font-size: 0.98rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .hero-badge {
+    width: 100%;
+    white-space: normal;
+  }
+
+  .hero-trust-strip {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .hero-trust-item {
+    min-height: 74px;
+    padding: 10px 6px;
+  }
+
+  .hero-trust-item span {
+    font-size: 0.68rem;
+  }
+}

@@ -1,0 +1,231 @@
+.site-header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* The top bar stays centered on desktop so the contact details read as one compact line. */
+.top-contact-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  flex-wrap: wrap;
+  padding: 7px 20px;
+  background: #0f5132;
+  color: #ffffff;
+  font-size: 0.86rem;
+}
+
+.top-contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.top-contact-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  /* Brand red is used only on the icons, giving the bar a clear accent without reducing text contrast. */
+  color: #e53935;
+  flex: 0 0 auto;
+}
+
+.top-contact-icon svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+/* A constrained inner nav balances the logo and links instead of pushing them to the viewport edges. */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(38px, 7vw, 92px);
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-logo {
+  width: 100px;
+  height: auto;
+}
+
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.5vw, 30px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-link {
+  color: #111827;
+  text-decoration: none;
+  font-size: 0.98rem;
+  font-weight: 700;
+  transition: color 180ms ease;
+}
+
+.navbar-link:hover {
+  color: #2e7d32;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    gap: 28px;
+    width: min(100% - 32px, 980px);
+  }
+
+  .navbar-list {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Mobile keeps the contact bar intentionally short so the Hero remains visible early. */
+  .top-contact-bar {
+    justify-content: flex-start;
+    gap: 5px 14px;
+    padding: 5px 14px;
+    font-size: 0.74rem;
+    line-height: 1.2;
+  }
+
+  .top-contact-item {
+    gap: 5px;
+  }
+
+  .top-contact-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .top-contact-icon svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  /* The nav stays in a single row while the links become a smooth dropdown panel. */
+  .navbar {
+    position: relative;
+    justify-content: space-between;
+    gap: 16px;
+    width: calc(100% - 28px);
+    padding: 8px 0;
+  }
+
+  .navbar-logo {
+    width: 88px;
+  }
+
+  .navbar-toggle {
+    display: inline-flex;
+    position: relative;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    border-radius: 8px;
+    background: #ffffff;
+    cursor: pointer;
+    box-shadow: 0 10px 22px rgba(17, 24, 39, 0.08);
+  }
+
+  .navbar-toggle span {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    border-radius: 999px;
+    background: #111827;
+    transition:
+      transform 220ms ease,
+      opacity 180ms ease,
+      top 220ms ease;
+  }
+
+  .navbar-toggle span:nth-child(1) {
+    top: 13px;
+  }
+
+  .navbar-toggle span:nth-child(2) {
+    top: 20px;
+  }
+
+  .navbar-toggle span:nth-child(3) {
+    top: 27px;
+  }
+
+  .navbar-toggle.is-open span:nth-child(1) {
+    top: 20px;
+    transform: rotate(45deg);
+  }
+
+  .navbar-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.is-open span:nth-child(3) {
+    top: 20px;
+    transform: rotate(-45deg);
+  }
+
+  .navbar-list {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    z-index: 2;
+    display: grid;
+    width: min(280px, calc(100vw - 28px));
+    gap: 4px;
+    padding: 10px;
+    border: 1px solid rgba(17, 24, 39, 0.08);
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 18px 44px rgba(17, 24, 39, 0.16);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease;
+  }
+
+  .navbar-list.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .navbar-link {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 6px;
+  }
+
+  .navbar-link:hover {
+    background: #f3f7f4;
+  }
+}

@@ -1,29 +1,87 @@
+import { useState } from 'react'
 import logo from '../assets/muso.png.png'
+import './navbar.css'
 
 const navLinks = ['Home', 'About', 'Services', 'Products', 'Trainings', 'Contact']
 
+const contactItems = [
+  {
+    href: 'tel:0703767584',
+    label: 'Phone: 0703767584',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M7.4 3.2 9.5 7.8c.3.7.1 1.5-.5 1.9l-1.2.9c1 2.1 2.6 3.7 4.7 4.7l.9-1.2c.5-.6 1.3-.8 1.9-.5l4.6 2.1c.7.3 1.1 1 .9 1.8l-.5 2.3c-.2.7-.8 1.2-1.6 1.2C10 21 3 14 3 5.3c0-.8.5-1.4 1.2-1.6l2.3-.5c.3-.1.6-.1.9 0Z" />
+      </svg>
+    ),
+  },
+  {
+    href: 'mailto:musoenterprise.com',
+    label: 'Email: muso enterprise.com',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4.8 6h14.4c1 0 1.8.8 1.8 1.8v8.4c0 1-.8 1.8-1.8 1.8H4.8c-1 0-1.8-.8-1.8-1.8V7.8C3 6.8 3.8 6 4.8 6Zm.4 2.1 6.1 4.6c.4.3.9.3 1.3 0l6.1-4.6H5.2Zm13.8 2-5.4 4c-1 .7-2.3.7-3.3 0L5 10.1v6.1h14v-6.1Z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Location: Utawala, Nairobi',
+    icon: (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.8c-3.6 0-6.5 2.8-6.5 6.3 0 4.5 5.3 10.7 5.9 11.4.3.4.9.4 1.2 0 .6-.7 5.9-6.9 5.9-11.4 0-3.5-2.9-6.3-6.5-6.3Zm0 8.9c-1.4 0-2.5-1.1-2.5-2.5S10.6 6.7 12 6.7s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5Z" />
+      </svg>
+    ),
+  },
+]
+
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  function toggleMenu() {
+    setIsMenuOpen((currentState) => !currentState)
+  }
+
   return (
-    <header style={styles.header}>
-      <div style={styles.topBar}>
-        <a href="tel:0703767584" style={styles.topLink}>
-          Phone: 0703767584
-        </a>
-        <a href="mailto:musoenterprise.com" style={styles.topLink}>
-          Email: muso enterprise.com
-        </a>
-        <span style={styles.topText}>Location: Utawala, Nairobi</span>
+    <header className="site-header">
+      {/* The top bar gives visitors quick contact details without competing with the main nav. */}
+      <div className="top-contact-bar">
+        {contactItems.map((item) => {
+          const ContactTag = item.href ? 'a' : 'span'
+
+          return (
+            <ContactTag href={item.href} className="top-contact-item" key={item.label}>
+              <span className="top-contact-icon">{item.icon}</span>
+              {item.label}
+            </ContactTag>
+          )
+        })}
       </div>
 
-      <nav style={styles.navbar} aria-label="Main navigation">
-        <a href="/" style={styles.brand}>
-          <img src={logo} alt="Muso Enterprise logo" style={styles.logo} />
+      <nav className="navbar" aria-label="Main navigation">
+        <a href="/" className="navbar-brand">
+          <img src={logo} alt="Muso Enterprise logo" className="navbar-logo" />
         </a>
 
-        <ul style={styles.navList}>
+        {/* The button controls the mobile menu while CSS handles the slide-down panel and X animation. */}
+        <button
+          className={`navbar-toggle ${isMenuOpen ? 'is-open' : ''}`}
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`navbar-list ${isMenuOpen ? 'is-open' : ''}`}>
           {navLinks.map((link) => (
             <li key={link}>
-              <a href={`#${link.toLowerCase()}`} style={styles.navLink}>
+              <a
+                href={`#${link.toLowerCase()}`}
+                className="navbar-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {link}
               </a>
             </li>
@@ -32,66 +90,6 @@ function Navbar() {
       </nav>
     </header>
   )
-}
-
-const styles = {
-  header: {
-    width: '100%',
-    backgroundColor: '#ffffff',
-    borderBottom: '1px solid #e5e7eb',
-    fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-  },
-  topBar: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '24px',
-    flexWrap: 'wrap',
-    padding: '8px 24px',
-    backgroundColor: '#0f5132',
-    color: '#ffffff',
-    fontSize: '14px',
-  },
-  topLink: {
-    color: '#ffffff',
-    textDecoration: 'none',
-    fontWeight: 500,
-  },
-  topText: {
-    fontWeight: 500,
-  },
-  navbar: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    gap: '24px',
-    padding: '14px 40px',
-  },
-  brand: {
-    display: 'inline-flex',
-    alignItems: 'center',
-    textDecoration: 'none',
-  },
-  logo: {
-    width: '120px',
-    height: 'auto',
-    display: 'block',
-  },
-  navList: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '28px',
-    listStyle: 'none',
-    margin: 0,
-    padding: 0,
-    flexWrap: 'wrap',
-  },
-  navLink: {
-    color: '#111827',
-    textDecoration: 'none',
-    fontSize: '16px',
-    fontWeight: 600,
-  },
 }
 
 export default Navbar
