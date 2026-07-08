@@ -1,6 +1,6 @@
 import Hero from './Hero'
 import Navbar from './navbar'
-
+import FtProducts from "./ftProducts";
 function Home() {
   return (
     // A page component groups sections together.
@@ -9,6 +9,7 @@ function Home() {
       <Navbar />
 
       <Hero />
+      <FtProducts />
     </>
   )
 }
