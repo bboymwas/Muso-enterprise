@@ -9,14 +9,18 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   /* Start alignment keeps the badges and first card visually level. */
-  align-items: start;
+  align-items: stretch;
   gap: 50px;
   width: min(1180px, 100%);
   margin: 0 auto;
 }
+.hero-content{
 
-.hero-content {
-  text-align: left;
+    display:flex;
+
+    flex-direction:column;
+
+    text-align:left;
 }
 
 .hero-badges {
@@ -160,53 +164,86 @@
 
 .hero-trust-strip {
   display: grid;
+  flex:1;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
-  align-content: start;
-  /* The strip keeps the left-column width while extra height lines it up with the right card stack. */
-  min-height: 250px;
+
+  gap: 16px;
+
   margin-top: 24px;
-  padding: 18px 18px 70px;
+
+  padding: 20px;
+  
+  min-height: 240px;
+
   border: 1px solid rgba(46, 125, 50, 0.12);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.07);
-}
 
-.hero-trust-kicker {
-  grid-column: 1 / -1;
-  margin: 0 0 4px;
-  color: #2e7d32;
-  font-size: 0.84rem;
-  font-weight: 900;
-  letter-spacing: 0;
-}
+  background: rgba(255,255,255,.82);
 
-.hero-trust-item {
-  display: grid;
+  box-shadow: 0 16px 34px rgba(17,24,39,.07);
+
+  /* THIS IS THE IMPORTANT CHANGE */
   align-content: center;
-  min-height: 86px;
-  padding: 14px 12px;
-  border: 1px solid rgba(17, 24, 39, 0.07);
-  border-radius: 8px;
-  background: #ffffff;
-  text-align: center;
-  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.05);
 }
 
-.hero-trust-item strong {
-  color: #111827;
-  font-size: 1.35rem;
-  line-height: 1;
-  font-weight: 900;
-}
+.hero-trust-kicker{
+    grid-column:1/-1;
 
-.hero-trust-item span {
-  margin-top: 7px;
-  color: #4b5563;
-  font-size: 0.76rem;
-  font-weight: 700;
-  line-height: 1.25;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 0 16px;
+
+    color:#2e7d32;
+
+    font-size:.95rem;
+
+    font-weight:800;
+}
+.hero-trust-item{
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    min-height:130px;
+
+    padding:18px 12px;
+
+    border:1px solid rgba(17,24,39,.07);
+
+    border-radius:10px;
+
+    background:#fff;
+
+    text-align:center;
+
+    box-shadow:0 8px 18px rgba(17,24,39,.05);
+}
+.hero-trust-item strong{
+
+    font-size:2rem;
+
+    font-weight:900;
+
+    color:#111827;
+
+    line-height:1;
+}
+.hero-trust-item span{
+
+    margin-top:10px;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    color:#4b5563;
+
+    line-height:1.35;
 }
 
 .hero-card-grid {
@@ -215,7 +252,7 @@
   gap: 18px;
   align-items: start;
   /* Tiny top offset visually aligns the first card with the badge row. */
-  padding-top: 2px;
+  padding-top: 4px;
 }
 
 .hero-card {
@@ -270,7 +307,7 @@
 
 .hero-card-image-2 {
   background:
-    linear-gradient(135deg, rgba(25, 118, 210, 0.86), rgba(46, 125, 50, 0.72)),
+    linear-gradient(135deg,rgba(25, 118, 210, 0.86 ), rgba(46, 125, 50, 0.72)),
     #e8f1fb;
 }
 
