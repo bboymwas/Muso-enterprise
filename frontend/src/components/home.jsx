@@ -3,7 +3,10 @@ import Navbar from './navbar'
 import FtProducts from './ftProducts'
 import Services from './services'
 import Founder from './Founder'
+import Training from './training'
 import Testimonial from './testimonial'
+import WhyUs from './whyUs'
+import CallToAction from './callToAction'
 
 function Home() {
   return (
@@ -16,7 +19,11 @@ function Home() {
       <FtProducts />
       <Services />
       <Founder />
+      <Training />
       <Testimonial />
+      <WhyUs />
+      <CallToAction />
+
     </>
   )
 }

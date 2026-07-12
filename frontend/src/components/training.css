@@ -1,0 +1,185 @@
+/* ===============================
+   Professional Training Section
+   =============================== */
+
+.training-section {
+  padding: 84px 24px 96px;
+  background: #f8fafc;
+}
+
+.training-container {
+  display: grid;
+  grid-template-columns: minmax(0, 0.5fr) minmax(0, 0.5fr);
+  gap: 44px;
+  align-items: center;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.training-copy {
+  display: flex;
+  flex-direction: column;
+}
+
+.training-kicker {
+  margin: 0 0 10px;
+  color: #1976d2;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.training-divider {
+  width: 72px;
+  height: 3px;
+  margin-bottom: 22px;
+  border-radius: 999px;
+  background: #2e7d32;
+}
+
+.training-copy h2 {
+  margin: 0 0 14px;
+  color: #111827;
+  font-size: clamp(2rem, 3.1vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.training-description {
+  margin: 0 0 24px;
+  color: #4b5563;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.training-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.training-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #111827;
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+
+.training-item-icon {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  color: #2e7d32;
+  flex-shrink: 0;
+}
+
+.training-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  background: #2e7d32;
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 14px 28px rgba(46, 125, 50, 0.22);
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.training-button:hover {
+  transform: translateY(-2px);
+  background: #256629;
+  box-shadow: 0 18px 34px rgba(46, 125, 50, 0.28);
+}
+
+.training-media {
+  display: flex;
+  justify-content: center;
+}
+
+.training-image-card {
+  width: 100%;
+  max-width: 520px;
+  overflow: hidden;
+  border: 1px solid rgba(17, 24, 39, 0.07);
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 20px 45px rgba(17, 24, 39, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.training-image-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 24px 54px rgba(17, 24, 39, 0.12);
+}
+
+.training-image-card img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform 240ms ease;
+}
+
+.training-image-card:hover img {
+  transform: scale(1.04);
+}
+
+.training-image-caption {
+  padding: 18px 20px 22px;
+}
+
+.training-image-caption h3 {
+  margin: 0 0 6px;
+  color: #111827;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.training-image-caption p {
+  margin: 0;
+  color: #5f6b7a;
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .training-container {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 760px) {
+  .training-section {
+    padding: 64px 16px 72px;
+  }
+
+  .training-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .training-copy {
+    order: 1;
+  }
+
+  .training-media {
+    order: 2;
+  }
+
+  .training-button {
+    width: 100%;
+  }
+
+  .training-image-card img {
+    height: 300px;
+  }
+}

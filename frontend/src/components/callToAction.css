@@ -1,0 +1,128 @@
+/* ===============================
+   Final Call-to-Action Section
+   =============================== */
+
+.final-cta-section {
+  padding: 24px 20px 84px;
+  background: #f8fafc;
+}
+
+.final-cta-container {
+  width: min(1080px, 100%);
+  margin: 0 auto;
+  padding: 48px 32px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #1976d2 0%, #2e7d32 100%);
+  box-shadow: 0 24px 54px rgba(17, 24, 39, 0.14);
+  text-align: center;
+  color: #ffffff;
+}
+
+.final-cta-label {
+  margin: 0 0 12px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.final-cta-container h2 {
+  margin: 0 auto 14px;
+  max-width: 720px;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.final-cta-description {
+  margin: 0 auto 28px;
+  max-width: 760px;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.final-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.final-cta-button.primary {
+  background: #ffffff;
+  color: #1976d2;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+}
+
+.final-cta-button.secondary {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.final-cta-button:hover {
+  transform: translateY(-2px);
+}
+
+.final-cta-trust {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.final-cta-trust-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.final-cta-trust-item svg {
+  color: #d8f3dc;
+}
+
+@media (max-width: 760px) {
+  .final-cta-section {
+    padding: 16px 16px 72px;
+  }
+
+  .final-cta-container {
+    padding: 36px 20px;
+  }
+
+  .final-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .final-cta-button {
+    width: 100%;
+  }
+
+  .final-cta-trust {
+    flex-direction: column;
+    align-items: center;
+  }
+}
