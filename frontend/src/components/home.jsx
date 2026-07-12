@@ -7,6 +7,7 @@ import Training from './training'
 import Testimonial from './testimonial'
 import WhyUs from './whyUs'
 import CallToAction from './callToAction'
+import Footer from './Footer'
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
       <Testimonial />
       <WhyUs />
       <CallToAction />
+      <Footer />
 
     </>
   )
