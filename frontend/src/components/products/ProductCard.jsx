@@ -1,19 +1,7 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import ImageCarousel from './ImageCarousel'
-import QuantitySelector from './QuantitySelector'
 
 function ProductCard({ product, onAddToOrder, onOpenModal }) {
-  const [quantity, setQuantity] = useState(1)
-
-  function increaseQuantity() {
-    setQuantity((currentQuantity) => currentQuantity + 1)
-  }
-
-  function decreaseQuantity() {
-    setQuantity((currentQuantity) => Math.max(1, currentQuantity - 1))
-  }
-
   return (
     <motion.article
       className="product-card"
@@ -32,9 +20,7 @@ function ProductCard({ product, onAddToOrder, onOpenModal }) {
         <p className="product-card-description">{product.description}</p>
         <div className="product-price">Ksh {product.price}</div>
 
-        <QuantitySelector quantity={quantity} onIncrease={increaseQuantity} onDecrease={decreaseQuantity} />
-
-        <button type="button" className="add-order-button" onClick={() => onAddToOrder(product, quantity)}>
+        <button type="button" className="add-order-button" onClick={() => onAddToOrder(product, 1)}>
           Add to Order
         </button>
       </div>

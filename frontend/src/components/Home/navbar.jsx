@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { FiShoppingBag } from 'react-icons/fi'
 import logo from '../assets/muso.png.png'
 import './navbar.css'
 
@@ -41,7 +42,7 @@ const contactItems = [
   },
 ]
 
-function Navbar() {
+function Navbar({ showCartButton = false, cartCount = 0, onOpenCart }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isContactHidden, setIsContactHidden] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -125,6 +126,15 @@ function Navbar() {
               </NavLink>
             </li>
           ))}
+
+          {showCartButton && (
+            <li className="navbar-list-item navbar-cart-item">
+              <button type="button" className="navbar-cart-button" onClick={onOpenCart}>
+                <FiShoppingBag size={16} />
+                <span>{cartCount}</span>
+              </button>
+            </li>
+          )}
         </ul>
       </nav>
     </header>

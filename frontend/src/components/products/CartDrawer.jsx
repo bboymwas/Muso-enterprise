@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { FiX } from 'react-icons/fi'
 import { OWNER_PHONE } from '../../data/products'
 
-function CartDrawer({ cart, totalItems, totalPrice, onClose, onIncrease, onDecrease, onRemove }) {
+function CartDrawer({ cart, totalItems, totalPrice, onClose, onIncrease, onDecrease, onRemove, compact = false, showOverlay = true }) {
   function sendToWhatsApp() {
     const messageLines = [
       'Hello Muso Enterprise,',
@@ -24,8 +24,8 @@ function CartDrawer({ cart, totalItems, totalPrice, onClose, onIncrease, onDecre
 
   return (
     <>
-      <motion.div className="cart-drawer-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />
-      <motion.aside className="cart-drawer" initial={{ x: '100%' }} animate={{ x: 0 }} exit={{ x: '100%' }} transition={{ type: 'spring', damping: 26, stiffness: 240 }}>
+      {showOverlay && <motion.div className="cart-drawer-overlay" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />}
+      <motion.aside className={`cart-drawer ${compact ? 'mobile-drawer' : ''}`} initial={compact ? { y: '100%' } : { x: '100%' }} animate={compact ? { y: 0 } : { x: 0 }} exit={compact ? { y: '100%' } : { x: '100%' }} transition={{ type: 'spring', damping: 26, stiffness: 240 }}>
         <div className="cart-drawer-header">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
