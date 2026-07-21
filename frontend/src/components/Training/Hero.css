@@ -1,0 +1,479 @@
+/* ===== TRAINING HERO ===== */
+.training-hero {
+  background: #f8f9fa;
+  color: #222222;
+  padding: 38px 24px 64px;
+  overflow: hidden;
+}
+
+.training-hero-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 50px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+/* ---------- LEFT COLUMN ---------- */
+.training-hero-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Badge */
+.training-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding: 10px 20px 10px 12px;
+  border: 1px solid rgba(46, 125, 50, 0.13);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
+  box-shadow:
+    0 12px 28px rgba(17, 24, 39, 0.07),
+    0 3px 8px rgba(46, 125, 50, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  color: #263238;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.training-hero-badge-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2e7d32;
+  flex: 0 0 auto;
+}
+
+/* Heading */
+.training-hero-content h1 {
+  max-width: 640px;
+  margin: 0 0 18px;
+  color: #222222;
+  font-size: clamp(2.25rem, 3.7vw, 4rem);
+  line-height: 1.06;
+  font-weight: 800;
+}
+
+.training-hero-highlight {
+  background: linear-gradient(135deg, #2e7d32, #1976d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Paragraph */
+.training-hero-description {
+  max-width: 600px;
+  margin: 0;
+  color: #4b5563;
+  font-size: 1.03rem;
+  line-height: 1.68;
+}
+
+/* CTA Buttons */
+.training-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.training-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.training-hero-btn:hover {
+  transform: translateY(-2px);
+}
+
+.training-hero-btn-primary {
+  background: #2e7d32;
+  color: #ffffff;
+  box-shadow: 0 14px 28px rgba(46, 125, 50, 0.22);
+}
+
+.training-hero-btn-primary:hover {
+  background: #256629;
+  box-shadow: 0 18px 34px rgba(46, 125, 50, 0.28);
+}
+
+.training-hero-btn-secondary {
+  background: #ffffff;
+  color: #1976d2;
+  border: 1px solid rgba(25, 118, 210, 0.2);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.08);
+}
+
+.training-hero-btn-secondary:hover {
+  color: #125ca5;
+  border-color: rgba(25, 118, 210, 0.36);
+}
+
+/* ===== TRUST STATS — green brand numbers, neutral labels ===== */
+.training-hero-trust-strip {
+  display: grid;
+  flex: 1;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+  padding: 20px;
+  min-height: 240px;
+  border: 1px solid rgba(46, 125, 50, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 34px rgba(17, 24, 39, 0.07);
+  align-content: center;
+}
+
+.training-hero-trust-kicker {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 16px;
+  color: #2e7d32;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.training-hero-trust-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 130px;
+  padding: 18px 12px;
+  border: 1px solid rgba(17, 24, 39, 0.07);
+  border-radius: 10px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.05);
+}
+
+.training-hero-trust-item strong {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #2e7d32;
+  line-height: 1;
+}
+
+.training-hero-trust-item span {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #4b5563;
+  line-height: 1.35;
+}
+
+/* ===== RIGHT COLUMN ===== */
+.training-hero-visual {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 520px;
+  padding-top: 10px;
+}
+
+/* Decorative blob */
+.training-hero-blob {
+  position: absolute;
+  top: 5%;
+  right: -5%;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(46, 125, 50, 0.12), rgba(25, 118, 210, 0.06));
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== PHOTO COMPOSITION ===== */
+.training-hero-photos {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+
+  height: 100%;
+}
+
+/* Top image — full width, large */
+.training-hero-photo-top {
+  width: 100%;
+}
+
+.training-hero-photo-top .training-hero-photo-img {
+  aspect-ratio: 16 / 10;
+}
+
+/* Bottom row — two images side by side */
+.training-hero-photo-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+}
+
+.training-hero-photo-bottom-item {
+  width: 100%;
+}
+
+.training-hero-photo-bottom-item .training-hero-photo-img {
+  aspect-ratio: 5/ 4;
+}
+
+/* Shared image styles */
+.training-hero-photo-img {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  box-shadow:
+    0 16px 36px rgba(17, 24, 39, 0.1),
+    0 4px 12px rgba(46, 125, 50, 0.06);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
+.training-hero-photo-img:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 22px 48px rgba(17, 24, 39, 0.14),
+    0 8px 16px rgba(46, 125, 50, 0.08);
+}
+
+/* Individual image backgrounds — replace with real photos */
+.training-hero-photo-img-1 {
+  background:
+    linear-gradient(135deg, rgba(46, 125, 50, 0.18), rgba(25, 118, 210, 0.12)),
+    linear-gradient(180deg, transparent 40%, rgba(17, 24, 39, 0.45) 100%),
+    #dbeafe center / cover no-repeat;
+}
+
+.training-hero-photo-img-2 {
+  background:
+    linear-gradient(135deg, rgba(25, 118, 210, 0.16), rgba(46, 125, 50, 0.1)),
+    linear-gradient(180deg, transparent 40%, rgba(17, 24, 39, 0.45) 100%),
+    #e8f1fb center / cover no-repeat;
+}
+
+.training-hero-photo-img-3 {
+  background:
+    linear-gradient(135deg, rgba(34, 34, 34, 0.1), rgba(46, 125, 50, 0.14)),
+    linear-gradient(180deg, transparent 40%, rgba(17, 24, 39, 0.45) 100%),
+    #e8f5e9 center / cover no-repeat;
+}
+
+/* Gradient overlay for text readability */
+.training-hero-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(17, 24, 39, 0.5) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Label at bottom of each image */
+.training-hero-photo-label {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(17, 24, 39, 0.35);
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.training-hero-photo-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+  flex: 0 0 auto;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .training-hero {
+    padding: 34px 22px 54px;
+  }
+
+  .training-hero-container {
+    gap: 30px;
+  }
+
+  .training-hero-trust-strip {
+    gap: 10px;
+    padding: 14px;
+    min-height: auto;
+  }
+
+  .training-hero-trust-item {
+    min-height: 100px;
+    padding: 14px 10px;
+  }
+
+  .training-hero-trust-item strong {
+    font-size: 2rem;
+  }
+
+  .training-hero-trust-item span {
+    font-size: 0.75rem;
+  }
+
+  .training-hero-visual {
+    min-height: 440px;
+  }
+
+  .training-hero-photos {
+    max-width: 400px;
+    gap: 12px;
+  }
+
+  .training-hero-photo-bottom {
+    gap: 12px;
+  }
+
+  .training-hero-photo-label {
+    padding: 12px;
+    font-size: 0.8rem;
+  }
+
+  .training-hero-photo-icon {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .training-hero {
+    padding: 30px 18px 48px;
+  }
+
+  .training-hero-container {
+    grid-template-columns: 1fr;
+  }
+
+  .training-hero-content h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+  }
+
+  .training-hero-actions,
+  .training-hero-btn {
+    width: 100%;
+  }
+
+  .training-hero-trust-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px;
+    min-height: auto;
+    margin-top: 20px;
+  }
+
+  .training-hero-trust-item {
+    min-height: 100px;
+    padding: 14px 10px;
+  }
+
+  .training-hero-trust-item strong {
+    font-size: 2.2rem;
+  }
+
+  .training-hero-trust-item span {
+    font-size: 0.75rem;
+  }
+
+  .training-hero-visual {
+    min-height: auto;
+    margin-top: 10px;
+  }
+
+  .training-hero-photos {
+    max-width: 380px;
+    gap: 10px;
+  }
+
+  .training-hero-photo-bottom {
+    gap: 10px;
+  }
+
+  .training-hero-photo-label {
+    padding: 10px;
+    font-size: 0.75rem;
+  }
+
+  .training-hero-photo-icon {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 440px) {
+  .training-hero-trust-strip {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .training-hero-trust-item {
+    min-height: 80px;
+    padding: 10px 6px;
+  }
+
+  .training-hero-trust-item strong {
+    font-size: 1.6rem;
+  }
+
+  .training-hero-trust-item span {
+    font-size: 0.68rem;
+    margin-top: 6px;
+  }
+
+  .training-hero-photos {
+    max-width: 320px;
+    gap: 8px;
+  }
+
+  .training-hero-photo-bottom {
+    gap: 8px;
+  }
+
+  .training-hero-photo-label {
+    padding: 8px;
+    font-size: 0.7rem;
+  }
+
+  .training-hero-photo-icon {
+    font-size: 0.85rem;
+  }
+}
