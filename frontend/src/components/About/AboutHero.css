@@ -1,0 +1,308 @@
+/* AboutHero.css - Premium Corporate Styling for About Page Hero Section */
+
+:root {
+  --primary-color: #2E7D32;
+  --primary-hover: #1b5e20;
+  --primary-light: rgba(46, 125, 50, 0.1);
+  --text-dark: #1a1a1a;
+  --text-muted: #4b5563;
+  --bg-light: #f9fafb;
+  --bg-white: #ffffff;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.08);
+  --visual-card-bg: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  --border-radius-lg: 24px;
+  --border-radius-md: 16px;
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.about-hero-section {
+  padding: 100px 24px;
+  background-color: var(--bg-light);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px); /* accounting for typical navbar height */
+}
+
+.about-hero-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+/* LEFT SIDE - CONTENT */
+.about-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  background-color: var(--primary-light);
+  padding: 8px 18px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(46, 125, 50, 0.15);
+}
+
+.about-hero-heading {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  color: var(--text-dark);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.about-hero-paragraph {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 540px;
+}
+
+.about-hero-actions {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-md);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(46, 125, 50, 0.25);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.35);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius-md);
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #f3f4f6;
+  border-color: #d1d5db;
+  transform: translateY(-2px);
+}
+
+/* RIGHT SIDE - MODERN VISUAL CARD AND INFO CARDS */
+.about-hero-visual {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* The modern composite visual card container */
+.visual-card-canvas {
+  background: var(--visual-card-bg);
+  border-radius: var(--border-radius-lg);
+  padding: 48px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(46, 125, 50, 0.05);
+}
+
+/* Modern backdrop elements */
+.visual-card-glow {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(74, 222, 128, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  pointer-events: none;
+}
+
+.visual-card-glow-2 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(134, 239, 172, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  bottom: -50px;
+  left: -50px;
+  pointer-events: none;
+}
+
+/* 2x2 Grid for the Info Cards */
+.info-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  z-index: 2;
+}
+
+/* Info Card styling */
+.info-card {
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius-md);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: var(--transition-smooth);
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(46, 125, 50, 0.2);
+}
+
+.info-card-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  transition: var(--transition-smooth);
+}
+
+.info-card:hover .info-card-icon-wrapper {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.info-card-title {
+  font-size: 1.125rem;
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.info-card-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Large Tablets / Small Desktops */
+@media (max-width: 1024px) {
+  .about-hero-container {
+    gap: 40px;
+  }
+  
+  .visual-card-canvas {
+    padding: 32px;
+  }
+  
+  .info-cards-grid {
+    gap: 16px;
+  }
+}
+
+/* Medium & Small Devices (Single Column Layout) */
+@media (max-width: 768px) {
+  .about-hero-section {
+    padding: 60px 20px;
+    min-height: auto;
+  }
+
+  .about-hero-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .about-hero-content {
+    align-items: center;
+  }
+
+  .about-hero-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .visual-card-canvas {
+    aspect-ratio: auto;
+    padding: 32px 20px;
+  }
+
+  .info-cards-grid {
+    grid-template-columns: 1fr; /* single column on mobile screens */
+    gap: 16px;
+  }
+  
+  .info-card {
+    align-items: center;
+    text-align: center;
+    padding: 24px 20px;
+  }
+  
+  .info-card-icon-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
