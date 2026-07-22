@@ -1,0 +1,239 @@
+TrainingCTA.css
+/*
+   Modern, premium, clean and corporate styling for the Training CTA component.
+*/
+
+/* SECTION */
+.training-cta-section {
+  background-color: #ffffff;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* CONTAINER */
+.training-cta-container {
+  max-width: 1200px;
+  max-height: 600px;
+  height:100%;
+  margin:0 auto;
+  margin-bottom: 50px;
+  width: 100%;
+  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+  border-radius: 24px;
+  padding:70px 20px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+/* Add subtle modern background abstract shapes for depth */
+.training-cta-container::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -150px;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.training-cta-container::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  pointer-events: none;
+}
+
+/* BADGE */
+.training-cta-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(4px);
+}
+
+/* HEADING */
+.training-cta-heading {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 800;
+  color: #ffffff;
+  max-width: 700px;
+  line-height: 1.25;
+  margin: 0 auto 20px auto;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* PARAGRAPH */
+.training-cta-paragraph {
+  font-size: clamp(1rem, 1.25vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.65;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+}
+
+/* BUTTONS CONTAINER */
+.training-cta-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+/* BUTTONS GENERAL */
+.training-cta-btn-primary,
+.training-cta-btn-secondary {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* PRIMARY BUTTON */
+.training-cta-btn-primary {
+  background-color: #ffffff;
+  color: #2E7D32;
+  border: 2px solid #ffffff;
+}
+
+.training-cta-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* SECONDARY BUTTON */
+.training-cta-btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.training-cta-btn-secondary:hover {
+  background-color: #ffffff;
+  color: #2E7D32;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* FEATURE ROW */
+.training-cta-features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+/* FEATURE ITEM */
+.training-cta-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+}
+
+/* ICON */
+.training-cta-feature-icon {
+  color: #ffffff;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* FEATURE TEXT */
+.training-cta-feature-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+
+/* Tablet (Up to 1024px) */
+@media (max-width: 1024px) {
+  .training-cta-section {
+    padding: 80px 24px;
+  }
+
+  .training-cta-container {
+    padding: 55px 30px;
+  }
+
+  .training-cta-heading {
+    margin-bottom: 16px;
+  }
+
+  .training-cta-paragraph {
+    margin-bottom: 32px;
+  }
+}
+
+/* Mobile (Up to 768px) */
+@media (max-width: 768px) {
+  .training-cta-section {
+    padding: 60px 16px;
+  }
+
+  .training-cta-container {
+    padding: 45px 20px;
+    border-radius: 20px;
+  }
+
+  .training-cta-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .training-cta-btn-primary,
+  .training-cta-btn-secondary {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 24px;
+  }
+
+  .training-cta-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .training-cta-feature-item {
+    justify-content: center;
+    width: 100%;
+  }
+}

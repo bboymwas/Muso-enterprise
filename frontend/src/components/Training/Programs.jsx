@@ -115,10 +115,9 @@ const Programs = () => {
           viewport={{ once: true }}
         >
           <span className="section-badge">OUR TRAINING PROGRAMS</span>
-          <h2 className="section-heading">Build Practical Skills That Create Real Business Opportunities</h2>
+          <h2 className="section-heading">Learn Practical Manufacturing Skills. Build a Profitable Cleaning Products Business.</h2>
           <p className="section-description">
-            Empowering you with hands-on training and business expertise to launch your own successful enterprise.
-          </p>
+           Gain hands-on experience in soap making, liquid detergents, sanitizers, packaging, branding, and business development. Our practical training equips you with the skills and confidence to manufacture quality products and turn them into a sustainable source of income.</p>
         </motion.div>
 
         <motion.div 
