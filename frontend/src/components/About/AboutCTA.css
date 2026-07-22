@@ -1,0 +1,107 @@
+/* CTA section styling – matches Muso Enterprise design system */
+
+.cta-section {
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4caf50;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.section-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 36px;
+  }
+}
+
+.section-paragraph {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 24px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #4caf50;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Decorative background circles */
+.cta-section::before,
+.cta-section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(76,175,80,0.1) 0%, transparent 70%);
+  z-index: -1;
+}
+
+.cta-section::before {
+  width: 200px;
+  height: 200px;
+  top: -50px;
+  left: -50px;
+}
+
+.cta-section::after {
+  width: 300px;
+  height: 300px;
+  bottom: -100px;
+  right: -100px;
+}

@@ -1,0 +1,107 @@
+/*
+ * Why Us section styling – matches the Muso Enterprise design system.
+ * White background, generous whitespace, soft shadows, rounded corners.
+ * Responsive grid: 3 columns on desktop, 2 on tablet, 1 on mobile.
+ */
+
+.why-us-section {
+  padding: 120px 20px 120px;
+  background: #ffffff;
+}
+
+.why-us-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #4caf50;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.75rem;
+}
+
+.section-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 36px;
+  }
+}
+
+.section-paragraph {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 680px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+
+@media (min-width: 600px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #4caf50;
+  margin: 0 auto 0.75rem;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
