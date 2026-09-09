@@ -1,5 +1,12 @@
-function About() {
-  return <h1>About Page</h1>;
-}
+import Navbar from "../../components/navbar";
+import Footer from "../../components/Footer";
 
-export default About;
+function Services () {
+  return(
+  <>
+  <Navbar/>
+  <Footer />
+  </>
+  )
+}
+export default Services

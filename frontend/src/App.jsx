@@ -4,6 +4,7 @@ import Training from './pages/Training/training'
 import ProductPage from './pages/products/ProductPage'
 import ContactPage from './pages/Contacts/ContactPage'
 import AboutPage from './pages/About/about'
+import Services from './pages/service/services'
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<Home />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/products" element={<ProductPage />} />
         <Route path="/training" element={<Training />} />
         <Route path="/contact" element={<ContactPage />} />
