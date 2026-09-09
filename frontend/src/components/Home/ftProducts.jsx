@@ -1,86 +1,8 @@
 // Import the CSS file that styles this component.
 import "./ftProducts.css";
+import {Link} from "react-router-dom";
+import products from '../../data/products'
 
-/*
-    This is our temporary product data.
-
-    We store products inside an ARRAY because there are many products.
-
-    Each product is an OBJECT because one product has
-    multiple pieces of information like:
-
-    - id
-    - badge
-    - name
-    - description
-    - image
-
-    Later this array will come from:
-
-    MySQL Database
-          ↓
-    Express Backend
-          ↓
-    React Frontend
-
-    Instead of writing the array ourselves.
-*/
-
-const products = [
-  {
-    id: 1,
-    badge: "Best Seller",
-    name: "Multipurpose Soap",
-    description:
-      "Effective everyday cleaning solution for homes and businesses.",
-    image: "https://placehold.co/600x400"
-  },
-
-  {
-    id: 2,
-    badge: "Personal Care",
-    name: "Beauty Bar Soap",
-    description:
-      "Gentle, quality bathing soap designed for everyday freshness.",
-    image: "https://placehold.co/600x400"
-  },
-
-  {
-    id: 3,
-    badge: "Power Clean",
-    name: "Jik (Bleach)",
-    description:
-      "Strong disinfecting bleach for homes, schools and institutions.",
-    image: "https://placehold.co/600x400"
-  },
-
-  {
-    id: 4,
-    badge: "Hygiene",
-    name: "Hand Wash",
-    description:
-      "Gentle hand washing solution that removes germs while protecting the skin.",
-    image: "https://placehold.co/600x400"
-  },
-
-  {
-    id: 5,
-    badge: "Customer Favourite",
-    name: "Multipurpose Liquid Soap",
-    description:
-      "Suitable for kitchens, offices, restaurants and homes.",
-    image: "https://placehold.co/600x400"
-  },
-
-  {
-    id: 6,
-    badge: "99.9% Protection",
-    name: "Hand Sanitizer",
-    description:
-      "Fast-acting sanitizer for maintaining hygiene anywhere.",
-    image: "https://placehold.co/600x400"
-  }
-];
 
 /*
     This is a React Functional Component.
@@ -183,10 +105,12 @@ function FtProducts() {
 
             {/* Button */}
 
-            <button>
-              View Details
-            </button>
-
+            <Link
+  to={`/products/${product.id}`}
+  className="product-details-button"
+>
+  View Details
+</Link>
           </div>
 
         ))}
@@ -197,9 +121,9 @@ function FtProducts() {
 
       <div className="products-button">
 
-        <button>
+        <Link to= "/products"className="view-all-products">
           View All Products →
-        </button>
+        </Link>
 
       </div>
 

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useParams } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Navbar from '../../components/navbar'
 import Footer from '../../components/Footer'
@@ -10,6 +11,7 @@ import products from '../../data/products'
 import '../../components/products/productStyles.css'
 
 function ProductPage() {
+   const { productId } = useParams()
   const [searchQuery, setSearchQuery] = useState('')
   const [cart, setCart] = useState([])
   const [isCartOpen, setIsCartOpen] = useState(false)
@@ -42,6 +44,19 @@ function ProductPage() {
 
     return () => window.removeEventListener('resize', handleResize)
   }, [])
+  useEffect(() => {
+  if (!productId) {
+    return
+  }
+
+  const product = products.find(
+    (item) => item.id === Number(productId)
+  )
+
+  if (product) {
+    setSelectedProduct(product)
+  }
+}, [productId])
 
   const cartCount = cart.reduce((total, item) => total + item.quantity, 0)
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0)

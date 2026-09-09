@@ -156,10 +156,10 @@ function Hero() {
               ease: 'easeOut',
             }}
           >
-            <a className="hero-button hero-button-primary" href="#products">
+            <a className="hero-button hero-button-primary" href="/products">
               View Products
             </a>
-            <a className="hero-button hero-button-secondary" href="#services">
+            <a className="hero-button hero-button-secondary" href="/services">
               Explore Services
             </a>
           </motion.div>
@@ -178,7 +178,7 @@ function Hero() {
               ease: 'easeOut',
             }}
           >
-            <p className="hero-trust-kicker">⭐ Trusted Across Kenya</p>
+            <p className="hero-trust-kicker"> Trusted Across Kenya</p>
             {trustStats.map((item) => (
               <div className="hero-trust-item" key={item.label}>
                 <strong>
@@ -237,7 +237,7 @@ function Hero() {
             empowering individuals and businesses across Kenya through practical
             chemical production training and professional hygiene solutions.
           </p>
-          <a className="hero-training-link" href="#trainings">
+          <a className="hero-training-link" href="\Training">
             Join Our Next Training {'\u2192'}
           </a>
         </motion.div>
