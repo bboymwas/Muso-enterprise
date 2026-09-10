@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion'
 import CountUp from '../Home/CountUp'
+import { useState } from 'react'
+import ContactModal from '../ContactModal'
 import './Hero.css'
 
 const prefersReducedMotion = () => {
+
   if (typeof window === 'undefined') return false
   return window.matchMedia('(prefers-reduced-motion: reduce)').matches
 }
@@ -15,6 +18,8 @@ const trustStats = [
 ]
 
 function TrainingHero() {
+  
+const [isModalOpen, setIsModalOpen] = useState(false)
   const shouldReduceMotion = prefersReducedMotion()
 
   const fadeIn = (delay = 0) => ({
@@ -66,9 +71,12 @@ function TrainingHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
           >
-            <a className="training-hero-btn training-hero-btn-primary" href="#cta">
-              Join Training
-            </a>
+            <button
+  className="training-hero-btn training-hero-btn-primary"
+  onClick={() => setIsModalOpen(true)}
+>
+  Join Training
+</button>
             <a className="training-hero-btn training-hero-btn-secondary" href="#programs">
               Explore Programs
             </a>
@@ -146,6 +154,13 @@ function TrainingHero() {
           </div>
         </motion.div>
       </div>
+      <ContactModal
+  isOpen={isModalOpen}
+  onClose={() => setIsModalOpen(false)}
+  title="Join Training"
+  description="Tell us about the training you are interested in."
+  defaultSubject="Training"
+/>
     </section>
   )
 }

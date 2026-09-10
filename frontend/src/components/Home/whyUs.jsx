@@ -114,17 +114,7 @@ export default function WhyUs() {
 					))}
 				</motion.div>
 
-				<motion.div className="why-us-cta" id="contact" variants={headingVariants}>
-					<p className="cta-label">Contact</p>
-					<h3>Ready to Work with Muso Enterprise?</h3>
-					<p>
-						Whether you're looking for premium cleaning products, professional chemical solutions,
-						or practical training, our team is ready to help your business succeed.
-					</p>
-					<a className="cta-button" href="#contact">
-						Contact Us
-					</a>
-				</motion.div>
+				
 			</div>
 		</motion.section>
 	)

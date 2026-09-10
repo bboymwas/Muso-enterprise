@@ -79,7 +79,7 @@ function Testimonial() {
             <span className="testimonial-rating-text">Rated 5.0 by our customers</span>
           </div>
 
-          <a className="testimonial-button" href="#contact">
+          <a className="testimonial-button" href="\contact">
             Become Our Next Success Story <span aria-hidden="true">→</span>
           </a>
         </motion.div>

@@ -99,7 +99,7 @@ function Services() {
           </div>
 
           <div className="services-actions">
-            <a className="services-button" href="#contact">
+            <a className="services-button" href="\services">
               Explore Services →
             </a>
             <p className="services-note">Discover how we can help you today!</p>
@@ -121,9 +121,7 @@ function Services() {
                 <span className="service-card-badge">{service.badge}</span>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <a className="service-card-button" href="#contact">
-                  Learn More
-                </a>
+               
               </div>
             </article>
           ))}

@@ -49,7 +49,7 @@ function Training() {
 
           <motion.a
             className="training-button"
-            href="#contact"
+            href="\training"
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
           >

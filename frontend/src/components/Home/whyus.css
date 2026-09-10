@@ -132,62 +132,6 @@ html {
   transform: translateY(-6px) scale(1.01);
 }
 
-.why-us-cta {
-  margin-top: 56px;
-  padding: 36px 24px;
-  background: linear-gradient(135deg, #0a3b3b 0%, #126b4a 100%);
-  color: #fff;
-  border-radius: 24px;
-  box-shadow: 0 20px 55px rgba(8, 51, 68, 0.18);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 12px;
-}
-
-.cta-label {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.24em;
-  font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.why-us-cta h3 {
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
-  line-height: 1.2;
-  margin: 0;
-  max-width: 620px;
-}
-
-.why-us-cta p {
-  margin: 0;
-  max-width: 620px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.7;
-  font-size: 1rem;
-}
-
-.cta-button {
-  margin-top: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 24px;
-  background: #fff;
-  color: #0a3b3b;
-  font-weight: 700;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
-}
 
 /* Make cards stack vertically on small screens with more spacing */
 @media (max-width: 420px) {
@@ -203,7 +147,4 @@ html {
     flex-basis: 52px;
   }
 
-  .why-us-cta {
-    padding: 28px 18px;
-  }
 }

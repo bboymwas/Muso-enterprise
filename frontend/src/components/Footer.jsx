@@ -13,12 +13,12 @@ import {
 } from 'react-icons/fa'
 
 const companyLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#founder' },
-  { label: 'Services', href: '#services' },
-  { label: 'Products', href: '#products' },
-  { label: 'Trainings', href: '#training' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: ' /' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Products', href: '/products' },
+  { label: 'Trainings', href: ' /training' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 const serviceLinks = [
@@ -33,7 +33,7 @@ const socials = [
   { label: 'Facebook', icon: <FaFacebookF />, href: 'https://facebook.com' },
   { label: 'Instagram', icon: <FaInstagram />, href: 'https://instagram.com' },
   { label: 'TikTok', icon: <FaTiktok />, href: 'https://www.tiktok.com' },
-  { label: 'WhatsApp', icon: <FaWhatsapp />, href: 'https://wa.me/254700000000' },
+  { label: 'WhatsApp', icon: <FaWhatsapp />, href: 'https://wa.me/254783616764' },
 ]
 
 function Footer() {
@@ -103,7 +103,7 @@ function Footer() {
             <ul>
               {serviceLinks.map((service) => (
                 <li key={service}>
-                  <a href="#services">{service}</a>
+                  <a href="/services">{service}</a>
                 </li>
               ))}
             </ul>
@@ -128,7 +128,7 @@ function Footer() {
                 <span className="footer-icon" aria-hidden="true">
                   <FaPhoneAlt />
                 </span>
-                +254 700 000 000
+                +254 783 616 764
               </li>
               <li>
                 <span className="footer-icon" aria-hidden="true">
@@ -150,8 +150,8 @@ function Footer() {
         <div className="footer-bottom">
           <p>© 2026 Muso Enterprise. All Rights Reserved.</p>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
+            <a >Privacy Policy</a>
+            <a >Terms of Service</a>
           </div>
         </div>
 
@@ -164,7 +164,9 @@ function Footer() {
         >
           <FaLaptopCode />
           <span>
-            Crafted by <span className="footer-credit-name">George Mwangi</span>
+            Crafted by <a href="https://www.instagram.com/just.mw3s?stkn=cTd5MG6eGR2Zmg0" target="_blank" rel="noopener noreferrer">
+              <span className="footer-credit-name">George Mwangi</span>
+            </a>
           </span>
         </motion.div>
       </motion.div>

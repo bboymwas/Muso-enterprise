@@ -56,7 +56,7 @@ function Founder() {
           </div>
 
           <div className="founder-actions">
-            <a className="founder-button" href="#contact">
+            <a className="founder-button" href="\contact">
               Talk To Our Team →
             </a>
           </div>
@@ -72,20 +72,18 @@ function Founder() {
               <div className="founder-play" aria-hidden="true">
                 <span>▶</span>
               </div>
-              <span className="founder-badge">Founder & Lead Trainer</span>
-              <span className="founder-duration">2 Minute Introduction</span>
+              <span className="founder-badge">What we do</span>
+              <span className="founder-duration">Sonnitech</span>
             </div>
 
             <div className="founder-video-body">
-              <h3>Meet the Founder</h3>
+              <h3>Meet us</h3>
               <p>
                 Learn the story behind Muso Enterprise and discover our mission of
                 delivering quality products, trusted services and practical training
                 across Kenya.
               </p>
-              <a className="founder-video-button" href="#founder">
-                Watch Full Story →
-              </a>
+
             </div>
           </div>
         </div>

@@ -47,7 +47,7 @@ function CallToAction() {
         <div className="final-cta-actions">
           <motion.a
             className="final-cta-button primary"
-            href="#contact"
+            href="\contact"
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
           >
@@ -56,7 +56,7 @@ function CallToAction() {
 
           <motion.a
             className="final-cta-button secondary"
-            href="#products"
+            href="\products"
             whileHover={{ scale: 1.03 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
           >

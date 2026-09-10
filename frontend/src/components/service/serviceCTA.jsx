@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion'
 import './serviceCTA.css'
+import {useState} from 'react'
+import ContactModal from '../ContactModal'
 
 function ServiceCTA() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
     <section className="service-cta-section" aria-labelledby="service-cta-heading">
       <motion.div
@@ -20,14 +24,15 @@ function ServiceCTA() {
         </p>
 
         <div className="service-cta-actions">
-          <motion.a
-            href="/contact"
-            className="service-cta-button primary"
-            whileHover={{ y: -2 }}
-            transition={{ duration: 0.2, ease: 'easeOut' }}
-          >
-            Book a Service
-          </motion.a>
+        <motion.button
+  type="button"
+  className="service-cta-button primary"
+  onClick={() => setIsModalOpen(true)}
+  whileHover={{ y: -2 }}
+  transition={{ duration: 0.2, ease: 'easeOut' }}
+>
+  Book a Service
+</motion.button>
 
           <motion.a
             href="/training"
@@ -43,7 +48,15 @@ function ServiceCTA() {
           Prefer to talk to us directly? Get in touch on WhatsApp.
         </p>
       </motion.div>
+      <ContactModal
+  isOpen={isModalOpen}
+  onClose={() => setIsModalOpen(false)}
+  title="Book a Service"
+  description="Tell us what service you need and our team will get back to you."
+  defaultSubject="Service Request"
+/>
     </section>
+
   )
 }
 
