@@ -213,7 +213,7 @@ function ContactModal({
               type="text"
               value={formData.context}
               onChange={handleChange}
-              placeholder="e.g. Office cleaning, hotel fumigation, staff training"
+              placeholder="e.g. Soap making,fumigation, staff training"
             />
           </div>
 

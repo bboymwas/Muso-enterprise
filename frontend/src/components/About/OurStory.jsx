@@ -40,7 +40,7 @@ const OurStory = () => {
       >
         {/* Left Column */}
         <motion.div className="our-story-left" variants={columnVariants}>
-          <span className="section-label">Our Story</span>
+          <span className="section-labell">Our Story</span>
           <h2 className="section-heading">
             From a Challenge to a Mission: Empowering Every Household and Business
           </h2>

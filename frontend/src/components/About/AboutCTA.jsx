@@ -34,7 +34,7 @@ const AboutCTA = () => {
         initial="hidden"
         animate="visible"
       >
-        <motion.span className="section-label" variants={itemVariants}>
+        <motion.span className="section-labelll" variants={itemVariants}>
           Ready to Get Started?
         </motion.span>
         <motion.h2 className="section-heading" variants={itemVariants}>

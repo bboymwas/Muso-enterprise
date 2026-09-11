@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
 import heroPhoto from '../../assets/hero.png'
 import './serviceHero.css'
+import {useState} from 'react'
+import ContactModal from '../ContactModal'
 
 const serviceLabels = [
   { label: 'Fumigation', className: 'label-top-left' },
@@ -20,6 +22,7 @@ const prefersReducedMotion = () => {
 }
 
 function ServiceHero() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const shouldReduceMotion = prefersReducedMotion()
 
   const fadeIn = (delay = 0) => ({
@@ -45,10 +48,17 @@ function ServiceHero() {
           </motion.p>
 
           <motion.div className="service-hero-actions" {...fadeIn(0.25)}>
-            <a className="service-hero-btn service-hero-btn-primary" href="/contact">
-              Book a Service
-            </a>
-            <a className="service-hero-btn service-hero-btn-secondary" href="#services-overview">
+                   <motion.button
+  type="button"
+  className="service-cta-button primary"
+  onClick={() => setIsModalOpen(true)}
+  whileHover={{ y: -2 }}
+  transition={{ duration: 0.2, ease: 'easeOut' }}
+>
+  Book a Service
+</motion.button>
+
+            <a className="service-hero-btn service-hero-btn-secondary" href="#services">
               Explore Our Services
             </a>
           </motion.div>
@@ -90,6 +100,13 @@ function ServiceHero() {
           </div>
         </motion.div>
       </div>
+      <ContactModal
+  isOpen={isModalOpen}
+  onClose={() => setIsModalOpen(false)}
+  title="Book a Service"
+  description="Tell us what service you need and our team will get back to you."
+  defaultSubject="Service Request"
+/>
     </section>
   )
 }

@@ -20,7 +20,7 @@ const servicesData = [
       'Keep your environment clean, hygienic and welcoming with practical cleaning solutions for homes, businesses and institutions.',
     points: ['Cleaning & hygiene solutions', 'Quality cleaning products', 'Solutions for homes & businesses'],
     cta: 'Get a Cleaning Solution',
-    href: '/contact',
+    href: '/products',
     imageAlt: 'Professional cleaning and hygiene service',
   },
   {

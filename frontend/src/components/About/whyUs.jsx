@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaLeaf, FaShieldVirus, FaGraduationCap, FaDollarSign, FaHandsHelping, FaUsers } from 'react-icons/fa';
-import './WhyUs.css';
+import './whyUs.css';
 
 const WhyUs = () => {
   const cardVariants = {
@@ -55,7 +55,7 @@ const WhyUs = () => {
   return (
     <section className="why-us-section" aria-label="Why Choose Us Section">
       <div className="why-us-container">
-        <span className="section-label">Why Choose Us</span>
+        <span className="section-labe">Why Choose Us</span>
         <h2 className="section-heading">Why Muso Enterprise is the trusted partner for your cleaning and business needs</h2>
         <p className="section-paragraph">Customers trust us because we combine premium products, expert services, and practical training to empower individuals and businesses alike.</p>
         <motion.div className="cards-grid" initial="hidden" animate="visible">

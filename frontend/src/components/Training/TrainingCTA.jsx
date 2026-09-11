@@ -2,9 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCheckCircle } from 'react-icons/fa';
+import {useState} from 'react'
+import ContactModal from '../ContactModal'
+
 import './TrainingCTA.css';
 
 const TrainingCTA = () => {
+  
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const containerVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -53,15 +58,22 @@ const TrainingCTA = () => {
 
         {/* Buttons */}
         <motion.div className="training-cta-buttons" variants={itemVariants}>
-          <Link to="/contact" className="training-cta-btn-primary">
-            Join a Training Program
-          </Link>
+    <motion.button
+    type="button"
+    className="training-cta-btn-primary"
+    onClick={() => setIsModalOpen(true)}
+    whileHover={{ y: -2 }}
+    transition={{ duration: 0.2, ease: 'easeOut' }}
+      >
+        Join a Training Program
+    </motion.button>
+
           <Link to="/contact" className="training-cta-btn-secondary">
             Contact Us
           </Link>
         </motion.div>
-
         {/* Features Row */}
+
         <motion.div className="training-cta-features" variants={itemVariants}>
           <div className="training-cta-feature-item">
             <FaCheckCircle className="training-cta-feature-icon" />
@@ -77,6 +89,13 @@ const TrainingCTA = () => {
           </div>
         </motion.div>
       </motion.div>
+         <ContactModal
+  isOpen={isModalOpen}
+  onClose={() => setIsModalOpen(false)}
+  title="Join Training"
+  description="Tell us about the training you are interested in."
+  defaultSubject="Training"
+/>
     </section>
   );
 };

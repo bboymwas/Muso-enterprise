@@ -33,13 +33,15 @@
 }
 
 /* Section label */
-.section-label {
+.section-labell{
+  display: flex;
+  align-items: start;
   font-size: 0.875rem;
   font-weight: 600;
   color: #4caf50;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  margin-bottom: 0.75rem;
+  margin:10px;
 }
 
 /* Heading */
@@ -51,6 +53,9 @@
 }
 
 @media (max-width: 768px) {
+  .section-labell{
+    align-items: center;
+  }
   .section-heading {
     font-size: 36px;
   }
