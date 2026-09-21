@@ -29,14 +29,14 @@
   gap: 10px;
   margin-bottom: 24px;
   padding: 10px 20px 10px 12px;
-  border: 1px solid rgba(46, 125, 50, 0.13);
+  border: 1px solid rgba(0, 87, 217, 0.12);
   border-radius: 999px;
   background: linear-gradient(180deg, #ffffff 0%, #f7fbf8 100%);
   box-shadow:
     0 12px 28px rgba(17, 24, 39, 0.07),
-    0 3px 8px rgba(46, 125, 50, 0.06),
+    0 3px 8px rgba(0, 87, 217, 0.04),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  color: #263238;
+  color: var(--charcoal);
   font-size: 0.88rem;
   font-weight: 700;
   line-height: 1.2;
@@ -49,7 +49,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #2e7d32;
+  background: var(--accent-green);
   flex: 0 0 auto;
 }
 
@@ -64,7 +64,7 @@
 }
 
 .training-hero-highlight {
-  background: linear-gradient(135deg, #2e7d32, #1976d2);
+  background: linear-gradient(135deg, var(--primary-blue), var(--bright-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -108,26 +108,26 @@
 }
 
 .training-hero-btn-primary {
-  background: #2e7d32;
+  background: var(--primary-blue);
   color: #ffffff;
-  box-shadow: 0 14px 28px rgba(46, 125, 50, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 87, 217, 0.22);
 }
 
 .training-hero-btn-primary:hover {
-  background: #256629;
-  box-shadow: 0 18px 34px rgba(46, 125, 50, 0.28);
+  background: var(--dark-blue);
+  box-shadow: 0 18px 34px rgba(0, 59, 153, 0.28);
 }
 
 .training-hero-btn-secondary {
-  background: #ffffff;
-  color: #1976d2;
-  border: 1px solid rgba(25, 118, 210, 0.2);
+  background: var(--accent-green);
+  color: #ffffff;
+  border: 1px solid rgba(76, 175, 27, 0.16);
   box-shadow: 0 12px 24px rgba(17, 24, 39, 0.08);
 }
 
 .training-hero-btn-secondary:hover {
-  color: #125ca5;
-  border-color: rgba(25, 118, 210, 0.36);
+  background: var(--dark-green);
+  border-color: rgba(47, 143, 22, 0.36);
 }
 
 /* ===== TRUST STATS — green brand numbers, neutral labels ===== */
@@ -139,7 +139,7 @@
   margin-top: 24px;
   padding: 20px;
   min-height: 240px;
-  border: 1px solid rgba(46, 125, 50, 0.12);
+  border: 1px solid rgba(0, 87, 217, 0.10);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.82);
   box-shadow: 0 16px 34px rgba(17, 24, 39, 0.07);
@@ -152,7 +152,7 @@
   justify-content: center;
   align-items: center;
   margin: 0 0 16px;
-  color: #2e7d32;
+  color: var(--primary-blue);
   font-size: 0.95rem;
   font-weight: 800;
 }
@@ -171,18 +171,28 @@
   box-shadow: 0 8px 18px rgba(17, 24, 39, 0.05);
 }
 
-.training-hero-trust-item strong {
-  font-size: 3rem;
+.training-hero-trust-value {
+  display: block;
+  margin-bottom: 2px;
+  font-size: clamp(1.8rem, 2vw, 2.6rem);
   font-weight: 900;
-  color: #2e7d32;
   line-height: 1;
+  letter-spacing: -0.05em;
+  color: var(--accent-green);
+}
+
+.training-hero-trust-number {
+  display: inline-block;
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--accent-green);
 }
 
 .training-hero-trust-item span {
-  margin-top: 10px;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #4b5563;
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #575a5a;
   line-height: 1.35;
 }
 
@@ -205,7 +215,7 @@
   width: 440px;
   height: 440px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(46, 125, 50, 0.12), rgba(25, 118, 210, 0.06));
+  background: radial-gradient(circle, rgba(76, 175, 27, 0.10), rgba(0, 87, 217, 0.06));
   filter: blur(60px);
   z-index: 0;
   pointer-events: none;
@@ -260,7 +270,7 @@
   justify-content: flex-start;
   box-shadow:
     0 16px 36px rgba(17, 24, 39, 0.1),
-    0 4px 12px rgba(46, 125, 50, 0.06);
+    0 4px 12px rgba(0, 87, 217, 0.06);
   transition: transform 300ms ease, box-shadow 300ms ease;
 }
 
@@ -268,27 +278,27 @@
   transform: translateY(-4px);
   box-shadow:
     0 22px 48px rgba(17, 24, 39, 0.14),
-    0 8px 16px rgba(46, 125, 50, 0.08);
+    0 8px 16px rgba(0, 87, 217, 0.08);
 }
 
 /* Individual image backgrounds — replace with real photos */
 .training-hero-photo-img-1 {
   background:
-    linear-gradient(135deg, rgba(46, 125, 50, 0.18), rgba(25, 118, 210, 0.12)),
+    linear-gradient(135deg, rgba(0, 87, 217, 0.12), rgba(25, 118, 210, 0.12)),
     linear-gradient(180deg, transparent 40%, rgba(17, 24, 39, 0.45) 100%),
     #dbeafe center / cover no-repeat;
 }
 
 .training-hero-photo-img-2 {
   background:
-    linear-gradient(135deg, rgba(25, 118, 210, 0.16), rgba(46, 125, 50, 0.1)),
+    linear-gradient(135deg, rgba(25, 118, 210, 0.16), rgba(76, 175, 27, 0.08)),
     linear-gradient(180deg, transparent 40%, rgba(17, 24, 39, 0.45) 100%),
     #e8f1fb center / cover no-repeat;
 }
 
 .training-hero-photo-img-3 {
   background:
-    linear-gradient(135deg, rgba(34, 34, 34, 0.1), rgba(46, 125, 50, 0.14)),
+    linear-gradient(135deg, rgba(34, 34, 34, 0.1), rgba(76, 175, 27, 0.12)),
     linear-gradient(180deg, transparent 40%, rgba(17, 24, 39, 0.45) 100%),
     #e8f5e9 center / cover no-repeat;
 }
@@ -344,8 +354,8 @@
     padding: 14px 10px;
   }
 
-  .training-hero-trust-item strong {
-    font-size: 2rem;
+  .training-hero-trust-value {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
   }
 
   .training-hero-trust-item span {
@@ -407,8 +417,8 @@
     padding: 14px 10px;
   }
 
-  .training-hero-trust-item strong {
-    font-size: 2.2rem;
+  .training-hero-trust-value {
+    font-size: clamp(1.5rem, 4vw, 2.1rem);
   }
 
   .training-hero-trust-item span {
@@ -450,8 +460,8 @@
     padding: 10px 6px;
   }
 
-  .training-hero-trust-item strong {
-    font-size: 1.6rem;
+  .training-hero-trust-value {
+    font-size: 1.45rem;
   }
 
   .training-hero-trust-item span {

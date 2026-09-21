@@ -62,7 +62,7 @@ function Testimonial() {
           <div className="testimonial-divider" aria-hidden="true" />
           <h2 id="testimonials-title">Trusted by Clients Who Value Quality, Reliability and Results</h2>
           <p className="testimonial-description">
-            Our clients choose Muso Enterprise because they want dependable support, professional service and products they can trust every single time.
+            Our clients choose Sonnitech Enterprise because they want dependable support, professional service and products they can trust every single time.
           </p>
 
           <div className="testimonial-stats" role="list" aria-label="Customer satisfaction statistics">

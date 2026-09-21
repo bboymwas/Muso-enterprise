@@ -12,7 +12,7 @@
   margin: 0 auto;
   padding: 48px 32px;
   border-radius: 24px;
-  background: linear-gradient(135deg, #1976d2 0%, #2e7d32 100%);
+  background: var(--primary-blue);
   box-shadow: 0 24px 54px rgba(17, 24, 39, 0.14);
   text-align: center;
   color: #ffffff;
@@ -65,15 +65,15 @@
 }
 
 .final-cta-button.primary {
-  background: #ffffff;
-  color: #1976d2;
+  background: var(--accent-green);
+  color: #ffffff;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
 }
 
 .final-cta-button.secondary {
-  background: rgba(255, 255, 255, 0.14);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: #ffffff;
+  color: var(--primary-blue);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .final-cta-button:hover {

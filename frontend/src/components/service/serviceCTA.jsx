@@ -20,7 +20,7 @@ function ServiceCTA() {
           Cleaner Spaces. Better Solutions. Stronger Opportunities.
         </h2>
         <p className="service-cta-description">
-          Whether you need professional fumigation, cleaning and hygiene solutions, or practical business training, Muso Enterprise is ready to help.
+          Whether you need professional fumigation, cleaning and hygiene solutions, or practical business training, Sonnitech Enterprise is ready to help.
         </p>
 
         <div className="service-cta-actions">

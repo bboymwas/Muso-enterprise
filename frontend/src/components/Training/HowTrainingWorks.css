@@ -1,70 +1,49 @@
-/* 
+/*
    HowTrainingWorks.css
-   Modern, premium, clean and corporate styling for the training journey steps.
+   Namespaced styling to keep this section isolated from Programs.
 */
 
-/* Section container with large vertical padding and light gray background */
-.training-journey {
+.how-training-journey {
   padding: 100px 20px;
   background-color: #f8f9fa;
   overflow: hidden;
   font-family: inherit;
 }
 
-/* Inner container to constrain maximum width and center content */
-.training-container {
+.how-training-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Header styled with centered text and spacing */
-.training-header {
+.how-training-header {
   text-align: center;
   margin-bottom: 64px;
 }
 
-/* Small green badge at the top of the header */
-.training-badge {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #2E7D32;
-  background-color: rgba(46, 125, 50, 0.1);
-  padding: 6px 16px;
-  border-radius: 50px;
-  margin-bottom: 16px;
-  letter-spacing: 1px;
-}
-
-/* Large bold heading */
-.training-title {
+.how-training-title {
   font-size: clamp(2rem, 4vw, 2.75rem);
-  color: #222222;
+  color: var(--charcoal);
   font-weight: 800;
   margin: 0 auto 16px auto;
   line-height: 1.2;
 }
 
-/* Supporting description paragraph */
-.training-description {
+.how-training-description {
   font-size: 1.1rem;
-  color: #4b5563;
+  color: var(--metallic-gray);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-/* Flexbox grid layout to handle responsiveness and alignment of the 5 cards */
-.training-grid {
+.how-training-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
 }
 
-/* Step Card styling - white, elevated, soft shadows, large borders, premium transition effects */
-.training-card {
+.how-training-card {
   flex: 1 1 calc(33.333% - 24px);
   min-width: 280px;
   max-width: 350px;
@@ -82,83 +61,78 @@
   box-sizing: border-box;
 }
 
-/* Hover effects - lift slightly and stronger shadow */
-.training-card:hover {
+.how-training-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* Step number in the top-left corner of the card */
-.training-step {
+.how-training-step {
   position: absolute;
   top: 24px;
   left: 32px;
   font-size: 0.85rem;
   font-weight: 700;
-  color: #2E7D32;
+  color: blue;
   opacity: 0.5;
 }
 
-/* Circular green container for the icon with a soft shadow */
-.training-icon {
+.how-training-icon {
   width: 64px;
   height: 64px;
-  background-color: #2E7D32;
-  color: #ffffff;
+  background-color: rgb(205, 205, 255);
+  color: #223ce4;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
   margin-bottom: 24px;
-  box-shadow: 0 8px 16px rgba(46, 125, 50, 0.2);
+  box-shadow: 0 8px 16px rgba(76, 175, 27, 0.18);
   transition: transform 0.3s ease;
 }
 
-.training-card:hover .training-icon {
+.how-training-card:hover .how-training-icon {
   transform: scale(1.05);
 }
 
-/* Card title - bold, dark, around 1.4rem */
-.training-card-title {
+.how-training-icon-svg {
+  font-size: 1.5rem;
+}
+
+.how-training-card-title {
   font-size: 1.4rem;
-  color: #1a1a1a;
+  color: var(--charcoal);
   font-weight: 700;
   margin-bottom: 16px;
   line-height: 1.3;
 }
 
-/* Card description - gray, centered and relaxed line height */
-.training-card-description {
+.how-training-card-description {
   font-size: 1rem;
-  color: #6b7280;
+  color: var(--metallic-gray);
   line-height: 1.6;
   margin: 0;
 }
 
-/* RESPONSIVE DESIGN BREAKPOINTS */
-
-/* Tablet (Up to 2 columns) */
 @media (max-width: 1024px) {
-  .training-card {
+  .how-training-card {
     flex: 1 1 calc(50% - 24px);
     max-width: 450px;
   }
 }
 
-/* Mobile / Small Screens (1 column, reduced section padding) */
 @media (max-width: 768px) {
-  .training-journey {
+  .how-training-journey {
     padding: 60px 16px;
   }
   
-  .training-card {
+  .how-training-card {
     flex: 1 1 100%;
     max-width: 100%;
     padding: 32px 24px;
   }
 
-  .training-header {
+  .how-training-header {
     margin-bottom: 40px;
   }
 }

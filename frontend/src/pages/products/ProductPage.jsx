@@ -125,7 +125,7 @@ function ProductPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.08, duration: 0.45 }}
           >
-            <span className="section-tag">Muso Enterprise</span>
+            <span className="section-tag">Sonnitech Enterprise</span>
             <h1>Premium cleaning essentials, presented with care.</h1>
             <p>
               Browse a curated showroom of trusted products and build your order effortlessly for a quick WhatsApp

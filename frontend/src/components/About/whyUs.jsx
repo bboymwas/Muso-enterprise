@@ -55,8 +55,8 @@ const WhyUs = () => {
   return (
     <section className="why-us-section" aria-label="Why Choose Us Section">
       <div className="why-us-container">
-        <span className="section-labe">Why Choose Us</span>
-        <h2 className="section-heading">Why Muso Enterprise is the trusted partner for your cleaning and business needs</h2>
+        <span className="section-label">Why Choose Us</span>
+        <h2 className="section-heading">Why Sonnitech Enterprise is the trusted partner for your cleaning and business needs</h2>
         <p className="section-paragraph">Customers trust us because we combine premium products, expert services, and practical training to empower individuals and businesses alike.</p>
         <motion.div className="cards-grid" initial="hidden" animate="visible">
           {cards.map((card) => (

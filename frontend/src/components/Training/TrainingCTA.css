@@ -22,7 +22,7 @@ TrainingCTA.css
   margin:0 auto;
   margin-bottom: 50px;
   width: 100%;
-  background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+  background: var(--primary-blue);
   border-radius: 24px;
   padding:70px 20px;
   color: #ffffff;
@@ -123,9 +123,9 @@ TrainingCTA.css
 
 /* PRIMARY BUTTON */
 .training-cta-btn-primary {
-  background-color: #ffffff;
-  color: #2E7D32;
-  border: 2px solid #ffffff;
+  background-color: var(--accent-green);
+  color: #ffffff;
+  border: 2px solid var(--accent-green);
 }
 
 .training-cta-btn-primary:hover {
@@ -142,7 +142,7 @@ TrainingCTA.css
 
 .training-cta-btn-secondary:hover {
   background-color: #ffffff;
-  color: #2E7D32;
+  color: var(--primary-blue);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }

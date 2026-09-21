@@ -87,7 +87,7 @@ function WhyUs() {
       variants={containerVariants}
     >
       <motion.div className="whyus-intro" variants={itemVariants}>
-        <p className="whyus-label">Why Choose Muso Enterprise?</p>
+        <p className="whyus-label">Why Choose Sonnitech Enterprise?</p>
         <h2 id="whyus-heading" className="whyus-heading">
           Professional service, practical solutions and a commitment to helping our customers achieve better results.
         </h2>

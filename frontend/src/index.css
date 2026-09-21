@@ -1,6 +1,22 @@
 :root {
+  /* Sonnitech Enterprise Design Tokens */
+  --primary-blue: #0057D9;
+  --dark-blue: #003B99;
+  --charcoal: #2D3748;
+  --silver: #C7CDD6;
+  --accent-green: #4CAF1B;
+  --section-bg: #f8fafc;
+  --danger-red: #ef4444;
+
+  /* Supporting tones */
+  --bright-blue: #1EA7FF;
+  --metallic-gray: #6B7280;
+  --light-silver: #C7CDD6;
+  --bright-green: #6EDB2D;
+  --dark-green: #2F8F16;
+
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  color: #222222;
+  color: var(--charcoal);
   background: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;

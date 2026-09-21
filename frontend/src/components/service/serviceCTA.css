@@ -1,7 +1,7 @@
 .service-cta-section {
   width: 100%;
   padding: clamp(48px, 6vw, 80px) 24px;
-  background: #0f2a45;
+  background: rgb(255, 255, 255);
 }
 
 .service-cta-card {
@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: clamp(32px, 3vw, 48px);
   border-radius: 30px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.08));
+  background: var(--primary-blue);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 28px 60px rgba(15, 23, 42, 0.22);
   text-align: center;
@@ -17,7 +17,7 @@
 
 .service-cta-eyebrow {
   margin: 0 0 16px;
-  color: #a1d199;
+  color: white;
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -61,18 +61,18 @@
 }
 
 .service-cta-button.primary {
-  background: #2e7d32;
+  background: var(--accent-green);
   color: #ffffff;
-  box-shadow: 0 14px 30px rgba(46, 125, 50, 0.18);
+  box-shadow: 0 14px 30px rgba(76, 175, 27, 0.18);
 }
 
 .service-cta-button.primary:hover {
-  background: #256629;
+  background: var(--dark-green);
 }
 
 .service-cta-button.secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+  background: white;
+  color: var(--primary-blue);
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 

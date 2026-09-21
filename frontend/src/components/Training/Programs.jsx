@@ -9,13 +9,12 @@ import {
 } from 'react-icons/fa';
 import './Programs.css';
 
-
 const programs = [
   {
     id: 1,
     title: "Beginner Soap Making",
     description: "Master the fundamentals of soap making with our comprehensive introductory course.",
-    icon: <FaSoap className="program-icon" />,
+    icon: <FaSoap className="programs-icon" />,
     learn: [
       "Basic soap making principles",
       "Essential safety protocols",
@@ -27,7 +26,7 @@ const programs = [
     id: 2,
     title: "Liquid Soap & Hand Wash Formulation",
     description: "Learn to create high-quality liquid soaps for various household and personal uses.",
-    icon: <FaFlask className="program-icon" />,
+    icon: <FaFlask className="programs-icon" />,
     learn: [
       "Liquid soap chemistry",
       "Surfactant usage guide",
@@ -39,7 +38,7 @@ const programs = [
     id: 3,
     title: "Laundry & Kitchen Detergents",
     description: "Formulate powerful cleaning solutions for laundry and kitchen applications.",
-    icon: <FaFlask className="program-icon" />,
+    icon: <FaFlask className="programs-icon" />,
     learn: [
       "Detergent formulation basics",
       "Stain removal science",
@@ -51,7 +50,7 @@ const programs = [
     id: 4,
     title: "Business & Marketing",
     description: "Turn your skills into a profitable business with our marketing strategies.",
-    icon: <FaChartLine className="program-icon" />,
+    icon: <FaChartLine className="programs-icon" />,
     learn: [
       "Market research basics",
       "Pricing your products",
@@ -63,7 +62,7 @@ const programs = [
     id: 5,
     title: "Natural Ingredient Sourcing & Blending",
     description: "Discover how to source and blend natural ingredients for premium products.",
-    icon: <FaLeaf className="program-icon" />,
+    icon: <FaLeaf className="programs-icon" />,
     learn: [
       "Sourcing natural oils",
       "Essential oil blending",
@@ -75,7 +74,7 @@ const programs = [
     id: 6,
     title: "Product Packaging & Branding",
     description: "Create a memorable brand identity and professional product packaging.",
-    icon: <FaBoxOpen className="program-icon" />,
+    icon: <FaBoxOpen className="programs-icon" />,
     learn: [
       "Brand identity design",
       "Packaging material selection",
@@ -106,7 +105,8 @@ const Programs = () => {
   };
 
   return (
-    <section className="programs-section">
+    /* Add id="programs" to the main section here */
+    <section id="programs" className="programs-section">
       <div className="programs-container">
         <motion.div 
           className="programs-header"
@@ -114,10 +114,11 @@ const Programs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="section-badge">OUR TRAINING PROGRAMS</span>
-          <h2 className="section-heading">Learn Practical Manufacturing Skills. Build a Profitable Cleaning Products Business.</h2>
-          <p className="section-description">
-           Gain hands-on experience in soap making, liquid detergents, sanitizers, packaging, branding, and business development. Our practical training equips you with the skills and confidence to manufacture quality products and turn them into a sustainable source of income.</p>
+          <span className="programs-badge">OUR TRAINING PROGRAMS</span>
+          <h2 className="programs-heading">Learn Practical Manufacturing Skills. Build a Profitable Cleaning Products Business.</h2>
+          <p className="programs-description">
+            Gain hands-on experience in soap making, liquid detergents, sanitizers, packaging, branding, and business development. Our practical training equips you with the skills and confidence to manufacture quality products and turn them into a sustainable source of income.
+          </p>
         </motion.div>
 
         <motion.div 
@@ -130,22 +131,22 @@ const Programs = () => {
           {programs.map((program) => (
             <motion.div 
               key={program.id}
-              className="program-card"
+              className="programs-card"
               variants={cardVariants}
               whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
             >
-              <div className="card-icon-wrapper">
+              <div className="programs-icon-wrapper">
                 {program.icon}
               </div>
-              <h3 className="program-title">{program.title}</h3>
-              <p className="program-description">{program.description}</p>
+              <h3 className="programs-title">{program.title}</h3>
+              <p className="programs-card-description">{program.description}</p>
               
-              <div className="learn-section">
-                <h4 className="learn-heading">You'll Learn</h4>
-                <ul className="learn-list">
+              <div className="programs-learn-section">
+                <h4 className="programs-learn-heading">You'll Learn</h4>
+                <ul className="programs-learn-list">
                   {program.learn.map((item, index) => (
-                    <li key={index} className="learn-item">
-                      <FaCheckCircle className="check-icon" />
+                    <li key={index} className="programs-learn-item">
+                      <FaCheckCircle className="programs-check-icon" />
                       <span>{item}</span>
                     </li>
                   ))}

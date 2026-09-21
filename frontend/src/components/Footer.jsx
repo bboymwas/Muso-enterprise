@@ -38,7 +38,7 @@ const socials = [
 
 function Footer() {
   return (
-    <footer className="site-footer" aria-label="Muso Enterprise footer">
+    <footer className="site-footer" aria-label="Sonnitech Enterprise footer">
       <motion.div
         className="footer-container"
         initial={{ opacity: 0, y: 24 }}
@@ -54,7 +54,7 @@ function Footer() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, ease: 'easeOut', delay: 0.05 }}
           >
-            <h3 className="footer-brand">Muso Enterprise</h3>
+            <h3 className="footer-brand">Sonnitech Enterprise</h3>
             <p className="footer-description">
               Providing quality cleaning products, chemical solutions, and professional training that help businesses maintain cleaner, safer, and more efficient environments.
             </p>
@@ -134,7 +134,7 @@ function Footer() {
                 <span className="footer-icon" aria-hidden="true">
                   <FaEnvelope />
                 </span>
-                info@musoenterprise.co.ke
+                info@sonnitechenterprise.co.ke
               </li>
               <li>
                 <span className="footer-icon" aria-hidden="true">
@@ -148,7 +148,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© 2026 Muso Enterprise. All Rights Reserved.</p>
+          <p>© 2026 Sonnitech Enterprise. All Rights Reserved.</p>
           <div className="footer-bottom-links">
             <a >Privacy Policy</a>
             <a >Terms of Service</a>

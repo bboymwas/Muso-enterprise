@@ -1,16 +1,16 @@
 /* AboutHero.css - Premium Corporate Styling for About Page Hero Section */
 
 :root {
-  --primary-color: #2E7D32;
-  --primary-hover: #1b5e20;
-  --primary-light: rgba(46, 125, 50, 0.1);
+  --primary-color: var(--primary-blue);
+  --primary-hover: var(--dark-blue);
+  --primary-light: rgba(0, 87, 217, 0.08);
   --text-dark: #1a1a1a;
   --text-muted: #4b5563;
   --bg-light: #f9fafb;
   --bg-white: #ffffff;
   --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
   --card-shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.08);
-  --visual-card-bg: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  --visual-card-bg: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
   --border-radius-lg: 24px;
   --border-radius-md: 16px;
   --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
@@ -55,7 +55,7 @@
   border-radius: 50px;
   margin-bottom: 24px;
   letter-spacing: 1.5px;
-  border: 1px solid rgba(46, 125, 50, 0.15);
+  border: 1px solid rgba(0, 87, 217, 0.12);
 }
 
 .about-hero-heading {
@@ -93,7 +93,7 @@
   border-radius: var(--border-radius-md);
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(46, 125, 50, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 87, 217, 0.20);
   transition: var(--transition-smooth);
   text-decoration: none;
 }
@@ -101,7 +101,7 @@
 .btn-primary:hover {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(46, 125, 50, 0.35);
+  box-shadow: 0 6px 20px rgba(0, 87, 217, 0.28);
 }
 
 .btn-secondary {
@@ -147,7 +147,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(46, 125, 50, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 87, 217, 0.04);
 }
 
 /* Modern backdrop elements */
@@ -155,7 +155,7 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  background: radial-gradient(circle, rgba(74, 222, 128, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(30, 167, 255, 0.14) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
   top: -100px;
   right: -100px;
@@ -166,7 +166,7 @@
   position: absolute;
   width: 250px;
   height: 250px;
-  background: radial-gradient(circle, rgba(134, 239, 172, 0.2) 0%, rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(30, 167, 255, 0.10) 0%, rgba(255, 255, 255, 0) 70%);
   border-radius: 50%;
   bottom: -50px;
   left: -50px;
@@ -198,7 +198,7 @@
 .info-card:hover {
   transform: translateY(-6px);
   box-shadow: var(--card-shadow-hover);
-  border-color: rgba(46, 125, 50, 0.2);
+  border-color: rgba(0, 87, 217, 0.10);
 }
 
 .info-card-icon-wrapper {

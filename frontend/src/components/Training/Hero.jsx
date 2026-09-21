@@ -93,8 +93,8 @@ const [isModalOpen, setIsModalOpen] = useState(false)
             <p className="training-hero-trust-kicker">&#11088; Training Impact</p>
             {trustStats.map((item) => (
               <div className="training-hero-trust-item" key={item.label}>
-                <strong>
-                  <CountUp value={item.value} suffix={item.suffix} />
+                <strong className="training-hero-trust-value">
+                  <CountUp value={item.value} suffix={item.suffix} className="training-hero-trust-number" />
                 </strong>
                 <span>{item.label}</span>
               </div>

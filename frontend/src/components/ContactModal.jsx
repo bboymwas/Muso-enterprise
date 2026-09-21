@@ -143,7 +143,7 @@ function ContactModal({
         </button>
 
         <div className="contact-modal-header">
-          <span className="contact-modal-tag">Muso Enterprise</span>
+          <span className="contact-modal-tag">Sonnitech Enterprise</span>
           <h2 id="contact-modal-title">{title}</h2>
           {description && <p>{description}</p>}
         </div>

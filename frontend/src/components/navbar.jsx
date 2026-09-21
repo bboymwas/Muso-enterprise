@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import { FiShoppingBag } from 'react-icons/fi'
-import logo from '../assets/muso.png.png'
+import logo from '../assets/sonnitech-logo.svg'
 import './navbar.css'
 
 const navLinks = [
@@ -24,8 +24,8 @@ const contactItems = [
     ),
   },
   {
-    href: 'mailto:info@musoenterprise.com',
-    label: 'Email: info@musoenterprise.com',
+    href: 'mailto:info@sonnitechenterprise.co.ke',
+    label: 'Email: info@sonnitechenterprise.co.ke',
     icon: (
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M4.8 6h14.4c1 0 1.8.8 1.8 1.8v8.4c0 1-.8 1.8-1.8 1.8H4.8c-1 0-1.8-.8-1.8-1.8V7.8C3 6.8 3.8 6 4.8 6Zm.4 2.1 6.1 4.6c.4.3.9.3 1.3 0l6.1-4.6H5.2Zm13.8 2-5.4 4c-1 .7-2.3.7-3.3 0L5 10.1v6.1h14v-6.1Z" />
@@ -46,7 +46,7 @@ function Navbar({ showCartButton = false, cartCount = 0, onOpenCart }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isContactHidden, setIsContactHidden] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
-  const [isCompactEmail, setIsCompactEmail] = useState(false)
+  const [isPhoneView, setIsPhoneView] = useState(false)
 
   useEffect(() => {
     function handleScroll() {
@@ -55,7 +55,7 @@ function Navbar({ showCartButton = false, cartCount = 0, onOpenCart }) {
     }
 
     function handleResize() {
-      setIsCompactEmail(window.innerWidth <= 390)
+      setIsPhoneView(window.innerWidth <= 760)
     }
 
     handleScroll()
@@ -83,8 +83,17 @@ function Navbar({ showCartButton = false, cartCount = 0, onOpenCart }) {
       <div className="top-contact-bar">
         {contactItems.map((item) => {
           const ContactTag = item.href ? 'a' : 'span'
-          const label = item.href?.startsWith('mailto:') && isCompactEmail ? 'Email Us' : item.label
-          const itemClassName = item.label.includes('Location') ? 'top-contact-item contact-location' : 'top-contact-item'
+          const isLocationItem = item.label.includes('Location')
+          const isEmailItem = item.href?.startsWith('mailto:')
+          const isPhoneItem = item.href?.startsWith('tel:')
+          const label = isPhoneItem && isPhoneView ? 'Contact' : item.label
+          const itemClassName = isLocationItem
+            ? 'top-contact-item contact-location'
+            : isEmailItem
+              ? 'top-contact-item contact-email'
+              : isPhoneItem
+                ? 'top-contact-item contact-phone'
+                : 'top-contact-item'
 
           return (
             <ContactTag href={item.href} className={itemClassName} key={item.label}>
@@ -97,7 +106,7 @@ function Navbar({ showCartButton = false, cartCount = 0, onOpenCart }) {
 
       <nav className="navbar" aria-label="Main navigation">
         <NavLink to="/" className="navbar-brand" end onClick={closeMenu}>
-          <img src={logo} alt="Muso Enterprise logo" className="navbar-logo" />
+          <img src={logo} alt="Sonnitech Enterprise logo" className="navbar-logo" />
         </NavLink>
 
         {/* The button controls the mobile menu while CSS handles the slide-down panel and X animation. */}

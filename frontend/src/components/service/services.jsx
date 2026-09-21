@@ -68,7 +68,7 @@ function Services() {
   const shouldReduceMotion = prefersReducedMotion()
 
   return (
-    <section className="services-section" aria-labelledby="services-heading">
+    <section id="services" className="services-section" aria-labelledby="services-heading">
       <motion.div
         className="services-intro"
         variants={itemVariants}

@@ -31,7 +31,7 @@ function CallToAction() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.08 }}
         >
-          Partner with Muso Enterprise Today
+          Partner with Sonnitech Enterprise Today
         </motion.h2>
 
         <motion.p

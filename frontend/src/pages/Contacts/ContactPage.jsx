@@ -21,9 +21,9 @@ const quickContacts = [
   },
   {
     title: 'Email',
-    value: 'info@musoenterprise.co.ke',
+    value: 'info@sonnitechenterprise.co.ke',
     icon: <FaEnvelope />,
-    href: 'mailto:info@musoenterprise.co.ke',
+    href: 'mailto:info@sonnitechenterprise.co.ke',
   },
   {
     title: 'Location',
@@ -44,7 +44,7 @@ const faqItems = [
   },
   {
     question: 'Do you provide training?',
-    answer: 'Yes, Muso Enterprise offers professional training sessions tailored to businesses and teams looking to improve operational standards.',
+    answer: 'Yes, Sonnitech Enterprise offers professional training sessions tailored to businesses and teams looking to improve operational standards.',
   },
   {
     question: 'Do you handle bulk orders?',
@@ -68,7 +68,7 @@ function ContactPage() {
         transition={{ duration: 0.45, ease: 'easeOut' }}
       >
         <div className="contact-hero-content">
-          <span className="section-tag">Muso Enterprise</span>
+          <span className="section-tag">Sonnitech Enterprise</span>
           <h1>Let&apos;s get in touch.</h1>
           <p>
             Whether you are looking for premium products, fumigation services, or practical training, our team is ready to assist with a prompt and professional response.
@@ -212,7 +212,7 @@ function ContactPage() {
         transition={{ delay: 0.1, duration: 0.42 }}
       >
         <iframe
-          title="Muso Enterprise location"
+          title="Sonnitech Enterprise location"
           src="https://www.google.com/maps?q=Nairobi%20Kenya&z=12&output=embed"
           loading="lazy"
           allowFullScreen

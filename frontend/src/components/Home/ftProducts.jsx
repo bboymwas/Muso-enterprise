@@ -35,7 +35,7 @@ function FtProducts() {
 
       <p className="section-description">
         From liquid soap and sanitizers to bleach and detergents,
-        Muso Enterprise manufactures affordable, high-quality
+        Sonnitech Enterprise manufactures affordable, high-quality
         cleaning products trusted by homes, businesses and
         institutions across Kenya.
       </p>

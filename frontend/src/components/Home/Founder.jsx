@@ -34,7 +34,7 @@ function Founder() {
             <span> Practical Training</span>
           </h2>
           <p className="founder-description">
-            At Muso Enterprise, we believe trust is earned through consistency,
+            At Sonnitech Enterprise, we believe trust is earned through consistency,
             honesty and delivering quality every day. Every cleaning product we
             manufacture, every fumigation service we provide and every entrepreneur
             we train reflects our commitment to improving homes, businesses and
@@ -79,7 +79,7 @@ function Founder() {
             <div className="founder-video-body">
               <h3>Meet us</h3>
               <p>
-                Learn the story behind Muso Enterprise and discover our mission of
+                Learn the story behind Sonnitech Enterprise and discover our mission of
                 delivering quality products, trusted services and practical training
                 across Kenya.
               </p>

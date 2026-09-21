@@ -5,7 +5,7 @@ import { OWNER_PHONE } from '../../data/products'
 function CartDrawer({ cart, totalItems, totalPrice, onClose, onIncrease, onDecrease, onRemove, compact = false, showOverlay = true }) {
   function sendToWhatsApp() {
     const messageLines = [
-      'Hello Muso Enterprise,',
+      'Hello Sonnitech Enterprise,',
       '',
       'I would like to order:',
       '',
@@ -29,10 +29,10 @@ function CartDrawer({ cart, totalItems, totalPrice, onClose, onIncrease, onDecre
         <div className="cart-drawer-header">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
-              <h3 style={{ margin: 0, color: '#14213d' }}>Your Order</h3>
-              <p style={{ margin: '6px 0 0', color: '#64748b' }}>{totalItems} item{totalItems === 1 ? '' : 's'} selected</p>
+              <h3 style={{ margin: 0, color: 'var(--charcoal)' }}>Your Order</h3>
+              <p style={{ margin: '6px 0 0', color: 'var(--metallic-gray)' }}>{totalItems} item{totalItems === 1 ? '' : 's'} selected</p>
             </div>
-            <button type="button" onClick={onClose} style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: '#14213d' }} aria-label="Close order panel">
+            <button type="button" onClick={onClose} style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--charcoal)' }} aria-label="Close order panel">
               <FiX size={20} />
             </button>
           </div>
@@ -40,7 +40,7 @@ function CartDrawer({ cart, totalItems, totalPrice, onClose, onIncrease, onDecre
 
         <div className="cart-drawer-body">
           {cart.length === 0 ? (
-            <p style={{ color: '#64748b' }}>Your cart is empty. Add a few products to get started.</p>
+            <p style={{ color: 'var(--metallic-gray)' }}>Your cart is empty. Add a few products to get started.</p>
           ) : (
             cart.map((item) => (
               <div key={item.id} className="cart-item">
@@ -55,7 +55,7 @@ function CartDrawer({ cart, totalItems, totalPrice, onClose, onIncrease, onDecre
                     <button type="button" onClick={() => onIncrease(item.id)} aria-label={`Increase ${item.name}`}>+</button>
                   </div>
                 </div>
-                <button type="button" onClick={() => onRemove(item.id)} style={{ border: 'none', background: 'transparent', color: '#ef4444', cursor: 'pointer' }} aria-label={`Remove ${item.name}`}>
+                <button type="button" onClick={() => onRemove(item.id)} style={{ border: 'none', background: 'transparent', color: 'var(--danger-red)', cursor: 'pointer' }} aria-label={`Remove ${item.name}`}>
                   Remove
                 </button>
               </div>
@@ -65,8 +65,8 @@ function CartDrawer({ cart, totalItems, totalPrice, onClose, onIncrease, onDecre
 
         <div className="cart-drawer-footer">
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-            <span style={{ color: '#64748b' }}>Estimated Total</span>
-            <strong style={{ color: '#14213d' }}>Ksh {totalPrice.toLocaleString()}</strong>
+            <span style={{ color: 'var(--metallic-gray)' }}>Estimated Total</span>
+            <strong style={{ color: 'var(--charcoal)' }}>Ksh {totalPrice.toLocaleString()}</strong>
           </div>
           <div className="cart-footer-actions">
             <button type="button" className="modal-close-button" onClick={onClose}>Continue Shopping</button>

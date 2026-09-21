@@ -114,7 +114,7 @@ const AboutHero = () => {
             className="about-hero-badge"
             variants={badgeVariants}
           >
-            About Muso Enterprise
+            About Sonnitech Enterprise
           </motion.span>
           
           <motion.h1
@@ -128,7 +128,7 @@ const AboutHero = () => {
             className="about-hero-paragraph"
             variants={paragraphVariants}
           >
-            Muso Enterprise manufactures affordable, premium-grade cleaning products, provides professional, eco-safe fumigation services, and equips people with essential, practical training to confidently start and grow successful businesses.
+            Sonnitech Enterprise manufactures affordable, premium-grade cleaning products, provides professional, eco-safe fumigation services, and equips people with essential, practical training to confidently start and grow successful businesses.
           </motion.p>
           
           <motion.div

@@ -18,13 +18,7 @@ const AboutCTA = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
-  const buttonVariants = {
-    hover: {
-      y: -4,
-      boxShadow: '0 8px 20px rgba(0,0,0,0.1)',
-      transition: { duration: 0.3, ease: 'easeOut' },
-    },
-  };
+ 
 
   return (
     <section className="cta-section" aria-label="Call to Action">
@@ -41,19 +35,19 @@ const AboutCTA = () => {
           Let&apos;s Build Cleaner Spaces and Stronger Communities Together
         </motion.h2>
         <motion.p className="section-paragraph" variants={itemVariants}>
-          Whether you&apos;re looking for high‑quality cleaning products, professional fumigation services, or practical business training, Muso Enterprise is here to help you create healthier environments and unlock new opportunities. Let&apos;s take the next step together.
+          Whether you&apos;re looking for high‑quality cleaning products, professional fumigation services, or practical business training, Sonnitech Enterprise is here to help you create healthier environments and unlock new opportunities. Let&apos;s take the next step together.
         </motion.p>
         <motion.div className="buttons-wrapper" variants={itemVariants}>
-          <motion.div whileHover="hover" variants={buttonVariants}>
+          
             <Link to="/products" className="btn-primary" aria-label="View our products">
               View Products
             </Link>
-          </motion.div>
-          <motion.div whileHover="hover" variants={buttonVariants}>
+          
+
             <Link to="/contact" className="btn-secondary" aria-label="Contact us">
               Contact Us
             </Link>
-          </motion.div>
+         
         </motion.div>
       </motion.div>
     </section>

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-function CountUp({ value, suffix = '' }) {
+function CountUp({ value, suffix = '', className = '' }) {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function CountUp({ value, suffix = '' }) {
   }, [value])
 
   return (
-    <span>
+    <span className={className}>
       {count.toLocaleString()}
       {suffix}
     </span>

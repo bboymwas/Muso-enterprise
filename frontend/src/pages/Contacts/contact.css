@@ -54,14 +54,14 @@
 }
 
 .contact-primary-button {
-  background: linear-gradient(135deg, #2e7d32 0%, #1976d2 100%);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
   color: white;
-  box-shadow: 0 16px 30px rgba(46, 125, 50, 0.2);
+  box-shadow: 0 16px 30px rgba(0, 87, 217, 0.18);
 }
 
 .contact-secondary-button {
   background: white;
-  color: #1976d2;
+  color: var(--primary-blue);
   border: 1px solid rgba(25, 118, 210, 0.18);
   box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
 }
@@ -104,13 +104,13 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(46, 125, 50, 0.14), rgba(25, 118, 210, 0.12));
-  color: #2e7d32;
+  background: linear-gradient(135deg, rgba(0, 87, 217, 0.12), rgba(30, 167, 255, 0.10));
+  color: #2a13d9;
 }
 
 .contact-card h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #14213d;
 }
 
@@ -249,7 +249,7 @@
   padding: 8px 12px;
   border-radius: 999px;
   background: #f3f7f4;
-  color: #2e7d32;
+  color: var(--primary-blue);
   font-size: 0.9rem;
   font-weight: 700;
 }

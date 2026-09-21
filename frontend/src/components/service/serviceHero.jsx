@@ -36,7 +36,7 @@ function ServiceHero() {
       <div className="service-hero-inner">
         <div className="service-hero-copy">
           <motion.span className="service-hero-badge" {...fadeIn(0)}>
-            MUSO ENTERPRISE
+            SONNITECH ENTERPRISE
           </motion.span>
 
           <motion.h1 id="service-hero-title" className="service-hero-heading" {...fadeIn(0.1)}>
@@ -44,7 +44,7 @@ function ServiceHero() {
           </motion.h1>
 
           <motion.p className="service-hero-text" {...fadeIn(0.2)}>
-            Muso Enterprise delivers trusted fumigation, professional cleaning and hygiene services, together with practical training that helps homes, businesses and entrepreneurs stay healthy, compliant and productive.
+            Sonnitech Enterprise delivers trusted fumigation, professional cleaning and hygiene services, together with practical training that helps homes, businesses and entrepreneurs stay healthy, compliant and productive.
           </motion.p>
 
           <motion.div className="service-hero-actions" {...fadeIn(0.25)}>

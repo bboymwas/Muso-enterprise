@@ -79,7 +79,7 @@ function Services() {
             Homes <span>Businesses</span> Institutions
           </p>
           <p className="services-description">
-            Muso Enterprise delivers dependable fumigation and pest management
+            Sonnitech Enterprise delivers dependable fumigation and pest management
             services for homes, offices, warehouses, and public institutions with
             careful planning and proven treatment methods.
           </p>
@@ -107,7 +107,7 @@ function Services() {
         </div>
 
         {/* The right column uses CSS Grid to create the 2x2 service card layout. */}
-        <div className="services-cards-grid" aria-label="Muso Enterprise service offerings">
+        <div className="services-cards-grid" aria-label="Sonnitech Enterprise service offerings">
           {serviceCards.map((service) => (
             <article className="service-card" key={service.title}>
               <div className="service-card-image-wrap">

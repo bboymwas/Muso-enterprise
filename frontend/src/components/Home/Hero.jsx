@@ -14,33 +14,33 @@ const prefersReducedMotion = () => {
 const heroBadges = [
   {
     icon: '\u2713',
-    text: 'Affordable Cleaning Products',
+    text: 'Cleaning Services Nairobi',
   },
   {
     icon: '\u{1F6E1}',
-    text: 'Professional Fumigation',
+    text: 'Fumigation Services Nairobi',
   },
   {
     icon: '\u{1F393}',
-    text: 'Hands-on Business Training',
+    text: 'Soap Making Training Kenya',
   },
 ]
 
 const heroCards = [
   {
-    title: 'Cleaning Products',
-    description: 'Quality soaps, detergents, sanitizers and disinfectants.',
-    label: 'Products',
+    title: 'Residential & Commercial Cleaning',
+    description: 'Trusted cleaning services in Nairobi for homes, offices, retail spaces, and commercial properties.',
+    label: 'Cleaning',
   },
   {
-    title: 'Training',
-    description: 'Learn practical chemical production from industry professionals.',
-    label: 'Skills',
+    title: 'Office Cleaning & Sanitization',
+    description: 'Professional cleaning Kenya solutions for healthier, cleaner, and more productive workplaces.',
+    label: 'Office',
   },
   {
-    title: 'Fumigation',
-    description: 'Protect homes and businesses with reliable pest control.',
-    label: 'Care',
+    title: 'Fumigation & Pest Control',
+    description: 'Reliable pest control Kenya services that protect homes, businesses, and facilities from infestations.',
+    label: 'Protection',
   },
 ]
 
@@ -80,7 +80,7 @@ function Hero() {
           {/* Badges quickly communicate trust signals before the main headline. */}
           <motion.div
             className="hero-badges"
-            aria-label="Muso Enterprise highlights"
+            aria-label="Sonnitech Enterprise highlights"
             initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -123,7 +123,7 @@ function Hero() {
               ease: 'easeOut',
             }}
           >
-            Cleaning Products, Fumigation Services & Chemical Training in Kenya
+            Proffesional Cleaning Products in Nairobi, Fumigation, Pest Control & Soap Making Training in Kenya
           </motion.h1>
 
           <motion.p
@@ -138,10 +138,12 @@ function Hero() {
               ease: 'easeOut',
             }}
           >
-            Muso Enterprise manufactures quality cleaning products, provides
-            professional fumigation services, and empowers Kenyans through
-            practical chemical production training for soaps, detergents,
-            disinfectants and other cleaning solutions for home or business use.
+            Sonnitech Enterprise provides professional cleaning services in Nairobi,
+            Kenya, including residential cleaning, commercial cleaning, office
+            cleaning, sanitization services, fumigation services Nairobi, and pest
+            control solutions for homes, businesses, and institutions. We also
+            supply quality cleaning products and deliver hands-on soap making training
+            Kenya clients trust.
           </motion.p>
 
           <motion.div
@@ -157,17 +159,17 @@ function Hero() {
             }}
           >
             <a className="hero-button hero-button-primary" href="/products">
-              View Products
+              Get Cleaning Products
             </a>
             <a className="hero-button hero-button-secondary" href="/services">
-              Explore Services
+              Get Pest Control & Fumigation
             </a>
           </motion.div>
 
           {/* Measurable proof appears immediately after the CTAs so the Hero feels complete. */}
           <motion.div
             className="hero-trust-strip"
-            aria-label="Muso Enterprise trust points"
+            aria-label="Sonnitech Enterprise trust points"
             initial={
               shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 35 }
             }
@@ -193,7 +195,7 @@ function Hero() {
         {/* These are styled image placeholders.
             When you have real photos, store them in src/assets/images/ and
             replace these placeholder divs with imported img elements. */}
-        <div className="hero-card-grid" aria-label="Featured Muso Enterprise services">
+        <div className="hero-card-grid" aria-label="Featured Sonnitech Enterprise services">
           {heroCards.map((card, index) => (
             <motion.article
               className="hero-card"
@@ -233,12 +235,12 @@ function Hero() {
           }}
         >
           <p>
-            Our mission is to make quality cleaning products affordable while
-            empowering individuals and businesses across Kenya through practical
-            chemical production training and professional hygiene solutions.
+            Our mission is to provide reliable professional cleaning Kenya services,
+            affordable cleaning products, and practical soap making training that help
+            homes, offices, and businesses stay clean, safe, and productive.
           </p>
           <a className="hero-training-link" href="\Training">
-            Join Our Next Training {'\u2192'}
+            Join Our Soap Making Training {'\u2192'}
           </a>
         </motion.div>
       </div>

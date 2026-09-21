@@ -47,7 +47,7 @@ const OurStory = () => {
           <p className="section-paragraph">
             Every day, families, small businesses, and aspiring entrepreneurs face
             the same hurdles: unreliable cleaning solutions, unsafe pest control
-            methods, and a lack of affordable, practical training. Muso
+            methods, and a lack of affordable, practical training. Sonnitech
             Enterprise was born to turn these pain points into opportunities.
           </p>
           <p className="section-paragraph">

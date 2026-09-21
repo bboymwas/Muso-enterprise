@@ -23,7 +23,7 @@
 
 .training-kicker {
   margin: 0 0 10px;
-  color: #1976d2;
+  color: var(--primary-blue);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.24em;
@@ -35,7 +35,7 @@
   height: 3px;
   margin-bottom: 22px;
   border-radius: 999px;
-  background: #2e7d32;
+  background: var(--primary-blue);
 }
 
 .training-copy h2 {
@@ -74,7 +74,7 @@
   place-items: center;
   width: 24px;
   height: 24px;
-  color: #2e7d32;
+  color: var(--primary-blue);
   flex-shrink: 0;
 }
 
@@ -86,18 +86,18 @@
   min-height: 48px;
   padding: 0 22px;
   border-radius: 8px;
-  background: #2e7d32;
+  background: var(--primary-blue);
   color: #ffffff;
   font-weight: 800;
   text-decoration: none;
-  box-shadow: 0 14px 28px rgba(46, 125, 50, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 87, 217, 0.22);
   transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
 }
 
 .training-button:hover {
   transform: translateY(-2px);
-  background: #256629;
-  box-shadow: 0 18px 34px rgba(46, 125, 50, 0.28);
+  background: var(--dark-blue);
+  box-shadow: 0 18px 34px rgba(0, 87, 217, 0.28);
 }
 
 .training-media {

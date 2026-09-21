@@ -80,11 +80,11 @@ export default function WhyUs() {
 				</motion.p>
 
 				<motion.h2 className="why-us-heading" variants={headingVariants}>
-					Why Businesses Across Kenya Choose Muso Enterprise
+					Why Businesses Across Kenya Choose Sonnitech Enterprise
 				</motion.h2>
 
 				<motion.p className="why-us-intro" variants={headingVariants}>
-					Muso combines quality products, professional services and practical chemical training to deliver reliable cleaning solutions.
+					Sonnitech combines quality products, professional services and practical chemical training to deliver reliable cleaning solutions.
 				</motion.p>
 
 				{/* cards container: features are rendered from an array using .map() */}
