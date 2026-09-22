@@ -1,105 +1,160 @@
 const products = [
   {
     id: 1,
-    name: 'Multipurpose Liquid Soap',
-    category: 'Liquid Soap',
-    description: 'A concentrated soap for homes, offices and commercial cleaning routines.',
+    name: 'Multipurpose Soap',
+    category: 'Soaps',
+    description:
+      'A versatile soap for everyday cleaning around homes, offices and other spaces.',
     longDescription:
-      'Crafted for customers who want reliable daily cleaning with a fresh finish. This liquid soap lifts stubborn grease and works beautifully across kitchens, bathrooms and general-purpose washing.',
+      'A practical multipurpose soap designed for everyday cleaning routines. Suitable for general household and commercial cleaning needs.',
     price: 350,
-    sizes: ['500ml', '1L', '5L'],
+    sizes: ['200g'],
     images: [
-      'https://images.unsplash.com/photo-1625772452859-1c03d5bf1137?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=900&q=80',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790050169/ChatGPT_Image_Sep_22_2026_07_08_58_AM.png',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790044910/IMG_4935.jpg',
     ],
-    features: ['Concentrated formula', 'Fresh citrus scent', 'Suitable for hand and surface cleaning'],
-    benefits: ['Cuts through grease quickly', 'Economical refill option', 'Easy to store and use'],
+    features: [
+      'Multipurpose cleaning',
+      'Long-lasting bar',
+      'Suitable for everyday cleaning',
+    ],
+    benefits: [
+      'Versatile for different cleaning tasks',
+      'Economical to use',
+      'Easy to store and handle',
+    ],
   },
+
   {
     id: 2,
+    name: 'Strawberry Handwash',
+    category: 'Handwash',
+    description:
+      'A refreshing strawberry handwash that cleans, moisturizes and softens the hands.',
+    longDescription:
+      'A refreshing handwash with a strawberry fragrance, designed for regular hand cleaning while leaving the hands feeling fresh and soft.',
+    price: 350,
+    sizes: ['500ml'],
+    images: [
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790049244/ChatGPT_Image_Sep_22_2026_06_53_36_AM.png',
+    ],
+    features: [
+      'Strawberry fragrance',
+      'Cleans hands effectively',
+      'Moisturizing formula',
+    ],
+    benefits: [
+      'Leaves hands feeling fresh',
+      'Suitable for regular handwashing',
+      'Pleasant strawberry fragrance',
+    ],
+  },
+
+  {
+    id: 3,
+    name: 'Bathing Soap',
+    category: 'Soaps',
+    description:
+      'A bathing soap designed for everyday personal cleansing.',
+    longDescription:
+      'A personal cleansing soap made for everyday bathing. Its smooth bar format makes it convenient for regular use.',
+    price: 150,
+    sizes: ['Bar'],
+    images: [
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790046104/ChatGPT_Image_Sep_22_2026_06_00_48_AM.png',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790044918/IMG_4943.jpg',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790044918/IMG_4940.jpg',
+    ],
+    features: [
+      'Suitable for everyday bathing',
+      'Easy-to-use bar format',
+      'Convenient for daily personal cleansing',
+    ],
+    benefits: [
+      'Suitable for regular bathing',
+      'Easy to handle',
+      'Convenient everyday soap',
+    ],
+  },
+
+  {
+    id: 4,
     name: 'Jik Bleach',
     category: 'Jik/Bleach',
-    description: 'Powerful bleaching and disinfecting solution for hygienic spaces.',
+    description:
+      'A bleach and disinfecting solution for household and general cleaning.',
     longDescription:
-      'Ideal when a space needs strong disinfection and visible freshness. This bleach solution is a dependable staple for toilets, floors and high-touch surfaces.',
+      'A practical bleach solution for cleaning and disinfection as part of regular household and facility hygiene routines.',
     price: 280,
     sizes: ['500ml', '1L', '5L'],
     images: [
-      'https://images.unsplash.com/photo-1608571424352-9261a1e1e6f8?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1615485291233-a0b4f52f8e7c?auto=format&fit=crop&w=900&q=80',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790046888/ChatGPT_Image_Sep_22_2026_06_14_26_AM.png',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790044917/IMG_4947.jpg',
     ],
-    features: ['Strong disinfectant action', 'Quick dilution', 'Excellent for sanitation routines'],
-    benefits: ['Boosts hygiene standards', 'Easy to mix and apply', 'Fits routine facility upkeep'],
-  },
-  {
-    id: 3,
-    name: 'Hand Sanitizer Gel',
-    category: 'Sanitizers',
-    description: 'Refreshing sanitizer gel for quick protection throughout the day.',
-    longDescription:
-      'A fast, practical hand sanitizer that helps teams and households stay safe in busy environments. The smooth gel formula is easy to carry and apply regularly.',
-    price: 220,
-    sizes: ['250ml', '500ml'],
-    images: [
-      'https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=900&q=80',
+    features: [
+      'Bleaching action',
+      'Disinfecting use',
+      'Suitable for cleaning routines',
     ],
-    features: ['Portable bottle', 'Fast-dry formula', 'Gentle fragrance'],
-    benefits: ['Supports daily hygiene', 'Convenient for travel', 'Trusted for busy workplaces'],
-  },
-  {
-    id: 4,
-    name: 'Toilet Cleaner',
-    category: 'Soaps',
-    description: 'Heavy-duty cleaner designed for toilets, sinks and stubborn stains.',
-    longDescription:
-      'A strong formula that handles limescale and tough deposits while remaining simple to apply. It gives facilities a fresh, polished finish after each routine clean.',
-    price: 310,
-    sizes: ['500ml', '1L'],
-    images: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=900&q=80',
+    benefits: [
+      'Supports household hygiene',
+      'Useful for regular cleaning',
+      'Available in different sizes',
     ],
-    features: ['Targeted bathroom cleaning', 'Effective on mineral buildup', 'Easy squeeze bottle'],
-    benefits: ['Improves presentation', 'Cuts cleaning effort', 'Ideal for regular maintenance'],
   },
+
   {
     id: 5,
-    name: 'Floor Mop Kit',
-    category: 'Cleaning Accessories',
-    description: 'Complete mop set for neat, fast floor care in homes and offices.',
+    name: 'Shower Gel',
+    category: 'Bath & Body',
+    description:
+      'A refreshing shower gel designed for everyday bathing and personal cleansing.',
     longDescription:
-      'This accessory kit combines practical reach and durability so staff and families can keep floors spotless with less effort. It is designed for frequent use and easy storage.',
-    price: 1450,
-    sizes: ['Standard', 'Premium'],
+      'A gentle and refreshing shower gel designed for everyday bathing. It creates a pleasant lather while leaving the skin feeling clean and refreshed.',
+    price: 350,
+    sizes: ['500ml'],
     images: [
-      'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=900&q=80',
+    'https://res.cloudinary.com/e3ar2duf/image/upload/v1790048311/ChatGPT_Image_Sep_22_2026_06_36_53_AM.png',
+      
     ],
-    features: ['Reusable mop head', 'Ergonomic handle', 'Easy rinse design'],
-    benefits: ['Improves daily upkeep', 'Saves time', 'Built for repeated use'],
+    features: [
+      'Refreshing formula',
+      'Pleasant fragrance',
+      'Suitable for everyday bathing',
+    ],
+    benefits: [
+      'Leaves skin feeling clean and refreshed',
+      'Easy to use',
+      'Suitable for daily personal care',
+    ],
   },
+
   {
     id: 6,
-    name: 'Disinfectant Spray',
-    category: 'Sanitizers',
-    description: 'A quick-spray disinfectant for counters, desks and shared surfaces.',
+    name: 'Multipurpose Liquid Soap',
+    category: 'Liquid Soap',
+    description:
+      'A versatile liquid soap for everyday cleaning around homes, offices and other spaces.',
     longDescription:
-      'Perfect for high-traffic spaces where safety needs to stay visible. The spray format makes it simple to cover surfaces in seconds without unnecessary mess.',
-    price: 420,
-    sizes: ['500ml', '1L'],
+      'A practical multipurpose liquid soap designed for everyday cleaning. Suitable for a range of household and commercial cleaning applications.',
+    price: 350,
+    sizes: ['500ml', '1L', '5L'],
     images: [
-      'https://images.unsplash.com/photo-1615486365801-d49c4f39700c?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1581578017432-3f4a1d4f4f05?auto=format&fit=crop&w=900&q=80',
-      'https://images.unsplash.com/photo-1625042834276-7f5ab7e81ab7?auto=format&fit=crop&w=900&q=80',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790048867/ChatGPT_Image_Sep_22_2026_06_46_42_AM.png',
     ],
-    features: ['Rapid spray action', 'Fresh scent', 'Ideal for shared areas'],
-    benefits: ['Supports hygiene compliance', 'Fast application', 'Keeps surfaces presentable'],
+    features: [
+      'Multipurpose cleaning',
+      'Easy-to-use liquid formula',
+      'Suitable for household and commercial use',
+    ],
+    benefits: [
+      'Versatile for different cleaning tasks',
+      'Convenient liquid format',
+      'Available in different sizes',
+    ],
   },
-]
+];
 
-export const OWNER_PHONE = '254724465988'
+export const OWNER_PHONE = '254724465988';
 
-export default products
+export default products;

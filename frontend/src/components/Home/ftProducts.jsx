@@ -81,16 +81,12 @@ function FtProducts() {
             {/* Product Image */}
 
             <img
-              src={product.image}
-              alt={product.name}
-            />
+            src={product.images[0]}
+            alt={product.name}
+             />
+           
 
-            {/* Badge */}
-
-            <span className="product-badge">
-              {product.badge}
-            </span>
-
+            
             {/* Product Name */}
 
             <h3>
