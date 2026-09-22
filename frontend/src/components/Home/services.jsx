@@ -35,7 +35,7 @@ const serviceCards = [
     title: 'Residential Fumigation',
     description: 'Discreet and effective pest control for homes, apartments, and family spaces.',
     image:
-      'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=900&q=80',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790089327/unsplash1.avif',
     icon: '🏡',
   },
   {
@@ -43,7 +43,7 @@ const serviceCards = [
     title: 'Commercial Fumigation',
     description: 'Professional treatment plans for offices, shops, hotels, and workspaces.',
     image:
-      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790089327/unsplash2.avif',
     icon: '🏢',
   },
   {
@@ -51,7 +51,7 @@ const serviceCards = [
     title: 'Industrial Pest Management',
     description: 'Reliable solutions for warehouses, factories, and larger facilities.',
     image:
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=900&q=80',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/v1790089327/unsplash3.avif',
     icon: '🏭',
   },
   {
@@ -59,7 +59,7 @@ const serviceCards = [
     title: 'Inspection & Consultation',
     description: 'Clear assessments and practical recommendations for long-term protection.',
     image:
-      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80',
+      'https://res.cloudinary.com/e3ar2duf/image/upload/c_crop,g_north_west,h_835,w_1436/copy_of_chatgpt_image_sep_22_2026_06_15_08_pm.png',
     icon: '🔎',
   },
 ]

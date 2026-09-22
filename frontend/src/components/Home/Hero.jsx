@@ -28,19 +28,22 @@ const heroBadges = [
 
 const heroCards = [
   {
-    title: 'Residential & Commercial Cleaning',
-    description: 'Trusted cleaning services in Nairobi for homes, offices, retail spaces, and commercial properties.',
-    label: 'Cleaning',
-  },
+  title: 'Quality Cleaning Products Kenya',
+  description: 'Shop high-quality cleaning products in Kenya including liquid soap, detergents, bleach, disinfectants, hand wash, and sanitizers for homes, businesses, schools, and institutions.',
+  label: 'Products',
+  img:'https://res.cloudinary.com/e3ar2duf/image/upload/v1790077281/ChatGPT_Image_Sep_22_2026_02_40_44_PM.png'
+},
   {
-    title: 'Office Cleaning & Sanitization',
-    description: 'Professional cleaning Kenya solutions for healthier, cleaner, and more productive workplaces.',
-    label: 'Office',
-  },
+  title: 'Soap Making Training in Nairobi',
+  description: 'Join professional soap making training in Nairobi and learn how to manufacture liquid soap, detergents, bleach, and disinfectants.',
+  label: 'Training',
+  img: 'https://res.cloudinary.com/e3ar2duf/image/upload/v1790076370/Jovens_transformam_toneladas_de_%C3%B3leo_alimentar_usado_em_sab%C3%A3o_e_detergente.jpg'
+},
   {
     title: 'Fumigation & Pest Control',
     description: 'Reliable pest control Kenya services that protect homes, businesses, and facilities from infestations.',
     label: 'Protection',
+    img:'https://res.cloudinary.com/e3ar2duf/image/upload/v1790075475/Cockroach_Control_Experts_for_Upperhill_State_House_Road_Nairobi_Tired_of_unwelcome_cockroach_guests__Bluestar_Pest_Controllers_has_you_covered_Serving_Upperhill_and_State_House_R.jpg'
   },
 ]
 
@@ -123,7 +126,7 @@ function Hero() {
               ease: 'easeOut',
             }}
           >
-            Proffesional Cleaning Products in Nairobi, Fumigation, Pest Control & Soap Making Training in Kenya
+            Profesional Cleaning Products in Nairobi, Fumigation, Pest Control & Soap Making Training in Kenya
           </motion.h1>
 
           <motion.p
@@ -209,10 +212,14 @@ function Hero() {
                 delay: shouldReduceMotion ? 0 : 0.84 + index * 0.15,
                 ease: 'easeOut',
               }}
-            >
-              <div className={`hero-card-image hero-card-image-${index + 1}`}>
-                <span>{card.label}</span>
-              </div>
+            ><div className="hero-card-image">
+  <img
+    src={card.img}
+    alt={card.title}
+    loading="lazy"
+  />
+  <span>{card.label}</span>
+</div>
               <div className="hero-card-body">
                 <h2>{card.title}</h2>
                 <p>{card.description}</p>

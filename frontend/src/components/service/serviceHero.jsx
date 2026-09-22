@@ -77,7 +77,7 @@ function ServiceHero() {
           <div className="service-hero-card">
             <div className="service-hero-image-frame">
               <img
-                src={heroPhoto}
+                src='https://res.cloudinary.com/e3ar2duf/image/upload/v1790082419/download_18.jpg'
                 alt="Professional cleaning and hygiene service team"
                 className="service-hero-image"
               />

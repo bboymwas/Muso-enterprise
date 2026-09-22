@@ -56,31 +56,35 @@ const OurStory = () => {
             tools they need to thrive. Our mission is simple: create healthier
             homes, safer workplaces, and stronger communities.
           </p>
-          <div className="highlights-row">
-            {highlights.map((h) => (
-              <motion.div
-                key={h.id}
-                className="highlight-card"
-                variants={highlightVariants}
-              >
-                <div className="highlight-icon">{h.icon}</div>
-                <span className="highlight-title">{h.title}</span>
-              </motion.div>
-            ))}
-          </div>
+          {/* highlights moved outside left column to allow grid spanning */}
         </motion.div>
         {/* Right Column */}
         <motion.div className="our-story-right" variants={columnVariants}>
           <div className="image-wrapper">
             <img
-              src="https://images.unsplash.com/photo-1584697964285-5c1b1e5b5e3b?auto=format&fit=crop&w=800&q=80"
+              src="https://res.cloudinary.com/e3ar2duf/image/upload/v1790079150/Ghana_WISE_Project.jpg"
               alt="Our Story visual representation"
               className="story-image"
             />
             <div className="decorative-bg" />
           </div>
         </motion.div>
+      {/* Highlights row moved here to span full grid width on desktop */}
+      <motion.div
+        className="highlights-row"
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+        }}
+      >
+        {highlights.map((h) => (
+          <motion.div key={h.id} className="highlight-card" variants={highlightVariants}>
+            <div className="highlight-icon">{h.icon}</div>
+            <span className="highlight-title">{h.title}</span>
+          </motion.div>
+        ))}
       </motion.div>
+    </motion.div>
     </section>
   );
 };

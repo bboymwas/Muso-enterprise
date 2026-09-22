@@ -121,15 +121,14 @@
   box-shadow: 0 24px 54px rgba(17, 24, 39, 0.12);
 }
 
-.training-image-card img {
-  display: block;
+.training-image {
   width: 100%;
   height: 360px;
   object-fit: cover;
-  transition: transform 240ms ease;
+  object-position: center top;
 }
 
-.training-image-card:hover img {
+.training-image-card:hover .training-image {
   transform: scale(1.04);
 }
 

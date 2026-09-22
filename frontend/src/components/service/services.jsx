@@ -11,6 +11,7 @@ const servicesData = [
     points: ['Residential & commercial fumigation', 'Pest prevention & control', 'Professional and reliable service'],
     cta: 'Book Fumigation',
     href: '/contact',
+    img:'https://res.cloudinary.com/e3ar2duf/image/upload/v1790086759/copy_of_copy_of_say_goodbye_to_pests_f.jpg',
     imageAlt: 'Professional fumigation and pest control service',
   },
   {
@@ -21,6 +22,7 @@ const servicesData = [
     points: ['Cleaning & hygiene solutions', 'Quality cleaning products', 'Solutions for homes & businesses'],
     cta: 'Get a Cleaning Solution',
     href: '/products',
+    img:'https://res.cloudinary.com/e3ar2duf/image/upload/v1790076990/ChatGPT_Image_Sep_22_2026_02_36_11_PM.png',
     imageAlt: 'Professional cleaning and hygiene service',
   },
   {
@@ -31,6 +33,7 @@ const servicesData = [
     points: ['Soap & liquid soap making', 'Detergent & sanitizer production', 'Business & marketing skills'],
     cta: 'Join Training',
     href: '/training',
+    img:"https://res.cloudinary.com/e3ar2duf/image/upload/v1790076370/Jovens_transformam_toneladas_de_%C3%B3leo_alimentar_usado_em_sab%C3%A3o_e_detergente.jpg",
     imageAlt: 'Hands-on training for cleaning and product production',
   },
 ]
@@ -98,7 +101,7 @@ function Services() {
           >
             <div className="service-card-media">
               <motion.img
-                src={heroPhoto}
+                src={service.img}
                 alt={service.imageAlt}
                 className="service-card-image"
                 whileHover={shouldReduceMotion ? undefined : { scale: 1.02 }}

@@ -69,8 +69,8 @@ function Training() {
             whileHover={{ y: -6, scale: 1.01 }}
             transition={{ duration: 0.24, ease: 'easeOut' }}
           >
-            <img
-              src="https://images.unsplash.com/photo-1581092335399-e034e35e2c26?auto=format&fit=crop&w=1200&q=80"
+            <img className="training-image"
+              src="https://res.cloudinary.com/e3ar2duf/image/upload/v1790077617/Soap_making_project_in_Khayelitsha_Township_Cape_Town_South_Africa_2010__.jpg"
               alt="Professional chemical training session with instructor and trainees"
             />
             <div className="training-image-caption">
