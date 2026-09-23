@@ -1,5 +1,5 @@
 import React from 'react'
-import './whyUs.css'
+import './whyus.css'
 import { motion } from 'framer-motion'
 import { FaAward, FaTruckFast, FaUserTie, FaLeaf, FaFlask, FaHeadset } from 'react-icons/fa6'
 

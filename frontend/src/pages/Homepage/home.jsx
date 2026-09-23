@@ -2,7 +2,6 @@ import Hero from '../../components/Home/Hero'
 import Navbar from '../../components/navbar'
 import FtProducts from '../../components/Home/ftProducts'
 import Services from '../../components/Home/services'
-import Founder from '../../components/Home/Founder'
 import Training from '../../components/Home/training'
 import Testimonial from '../../components/Home/testimonial'
 import WhyUs from '../../components/Home/whyUs'
@@ -19,7 +18,6 @@ function Home() {
       <Hero />
       <FtProducts />
       <Services />
-      <Founder />
       <Training />
       <Testimonial />
       <WhyUs />
