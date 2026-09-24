@@ -102,8 +102,7 @@ function Services() {
             <a className="services-button" href="\services">
               Explore Services →
             </a>
-            <p className="services-note">Discover how we can help you today!</p>
-          </div>
+           </div>
         </div>
 
         {/* The right column uses CSS Grid to create the 2x2 service card layout. */}

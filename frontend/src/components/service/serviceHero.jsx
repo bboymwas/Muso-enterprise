@@ -1,14 +1,7 @@
 import { motion } from 'framer-motion'
-import heroPhoto from '../../assets/hero.png'
 import './serviceHero.css'
-import {useState} from 'react'
+import { useState } from 'react'
 import ContactModal from '../ContactModal'
-
-const serviceLabels = [
-  { label: 'Fumigation', className: 'label-top-left' },
-  { label: 'Cleaning', className: 'label-top-right' },
-  { label: 'Training', className: 'label-bottom-left' },
-]
 
 const trustStats = [
   { value: '24 Hr', label: 'Reliable Response' },
@@ -81,21 +74,6 @@ function ServiceHero() {
                 alt="Professional cleaning and hygiene service team"
                 className="service-hero-image"
               />
-            </div>
-
-            <div className="service-hero-labels">
-              {serviceLabels.map((item) => (
-                <motion.div
-                  key={item.label}
-                  className={`service-hero-label ${item.className}`}
-                  initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.45, ease: 'easeOut' }}
-                >
-                  <span className="service-hero-label-dot" aria-hidden="true" />
-                  {item.label}
-                </motion.div>
-              ))}
             </div>
           </div>
         </motion.div>

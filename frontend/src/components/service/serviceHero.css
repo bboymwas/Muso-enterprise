@@ -66,36 +66,53 @@
   margin-top: 6px;
 }
 
-.service-hero-btn {
+.service-hero-actions > * {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.service-hero-btn,
+.service-cta-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
   min-height: 52px;
   padding: 0 28px;
   border-radius: 16px;
   font-weight: 700;
   text-decoration: none;
-  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, color 180ms ease, border-color 180ms ease;
 }
 
-.service-hero-btn:hover { transform: translateY(-2px); }
+.service-hero-btn:hover,
+.service-cta-button:hover { transform: translateY(-2px); }
 
-.service-hero-btn-primary {
+.service-hero-btn-primary,
+.service-cta-button.primary {
   background: var(--primary-blue);
   color: #ffffff;
+  border: 1px solid var(--primary-blue);
   box-shadow: 0 20px 40px rgba(0, 87, 217, 0.18);
 }
 
-.service-hero-btn-primary:hover { background: var(--dark-blue); }
+.service-hero-btn-primary:hover,
+.service-cta-button.primary:hover { background: var(--dark-blue); }
 
-.service-hero-btn-secondary {
-  background: #ffffff;
-  color: #153348;
-  border: 1px solid rgba(15, 23, 42, 0.14);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
+.service-hero-btn-secondary,
+.service-cta-button.secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: #8ed0a6;
+  border: 1px solid #8ed0a6;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.04);
 }
 
-.service-hero-btn-secondary:hover { background: #f7fafc; }
+.service-hero-btn-secondary:hover,
+.service-cta-button.secondary:hover {
+  background: rgba(142, 208, 166, 0.08);
+  color: #74b98f;
+  border-color: #74b98f;
+}
 
 .service-hero-trust-grid {
   display: grid;
@@ -125,16 +142,6 @@
 .service-hero-image-frame { width:100%; overflow:hidden; }
 .service-hero-image { width:100%; display:block; object-fit:cover; aspect-ratio:4/5; }
 
-.service-hero-labels { position:absolute; inset:0; pointer-events:none; }
-
-.service-hero-label { position:absolute; display:inline-flex; align-items:center; padding:10px 14px; border-radius:999px; background:rgba(255,255,255,0.94); border:1px solid rgba(15,23,42,0.08); color:#102a43; font-size:0.92rem; font-weight:700; gap:10px; min-width:120px; }
-
-.service-hero-label-dot { width:8px; height:8px; border-radius:50%; background:var(--primary-blue); }
-
-.label-top-left { top:24px; left:20px; }
-.label-top-right { top:24px; right:20px; }
-.label-bottom-left { bottom:24px; left:20px; }
-
 @media (max-width: 1199px) {
   .service-hero { padding: clamp(42px, 5vw, 68px) 24px clamp(36px, 4vw, 56px); }
   .service-hero-inner { gap: clamp(32px, 4vw, 52px); }
@@ -142,13 +149,51 @@
   .service-hero-text { font-size: 1rem; }
   .service-hero-visual { justify-content: flex-end; }
   .service-hero-card { max-width: 460px; }
-  .service-hero-label { padding: 10px 12px; font-size: 0.88rem; gap: 8px; min-width: 110px; }
+  .service-hero-trust-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 100%;
+  }
+  .service-hero-trust-item {
+    padding: 14px 16px;
+  }
+  .service-hero-trust-item strong {
+    font-size: 1.08rem;
+  }
+  .service-hero-trust-item span {
+    margin-top: 4px;
+    font-size: 0.86rem;
+  }
 }
 
 @media (max-width: 980px) {
   .service-hero-inner { grid-template-columns: 1fr; align-items: stretch; }
   .service-hero-visual { justify-content: center; }
-  .service-hero-trust-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .label-top-left, .label-top-right, .label-bottom-left { position: relative; top: auto; left: auto; right: auto; bottom: auto; }
-  .service-hero-label { position: relative; display:flex; flex-wrap:wrap; gap:12px; padding:18px 16px 22px; justify-content:flex-start; align-items:center; background: rgba(255,255,255,0.95); }
+
+  .service-hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .service-hero-actions > * {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .service-hero-btn,
+  .service-cta-button {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 28px;
+  }
+
+  .service-hero-trust-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .service-hero-trust-item {
+    padding: 12px 14px;
+  }
 }

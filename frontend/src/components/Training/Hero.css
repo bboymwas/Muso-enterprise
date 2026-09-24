@@ -245,7 +245,7 @@
 /* Bottom row — two images side by side */
 .training-hero-photo-bottom {
   display: grid;
-  grid-template-columns: 5fr 5fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
   width: 100%;
   height: 240px;
@@ -254,17 +254,19 @@
 
 .training-hero-photo-bottom-item {
   width: 100%;
+  height: 100%;
 }
 
 .training-hero-photo-bottom-item .training-hero-photo-img {
-  aspect-ratio: 5/ 4;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
 }
 
 /* Shared image styles */
 .training-hero-photo-img {
   position: relative;
   width: 100%;
-  height:80%;
   border-radius: 14px;
   overflow: hidden;
   display: flex;
@@ -274,6 +276,9 @@
     0 16px 36px rgba(17, 24, 39, 0.1),
     0 4px 12px rgba(0, 87, 217, 0.06);
   transition: transform 300ms ease, box-shadow 300ms ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .training-hero-photo-img:hover {
@@ -431,6 +436,12 @@
 
   .training-hero-photo-bottom {
     gap: 10px;
+    height: 170px;
+  }
+
+  .training-hero-photo-bottom-item,
+  .training-hero-photo-bottom-item .training-hero-photo-img {
+    height: 100%;
   }
 
   .training-hero-photo-label {
@@ -470,6 +481,12 @@
 
   .training-hero-photo-bottom {
     gap: 8px;
+    height: 150px;
+  }
+
+  .training-hero-photo-bottom-item,
+  .training-hero-photo-bottom-item .training-hero-photo-img {
+    height: 100%;
   }
 
   .training-hero-photo-label {
