@@ -29,13 +29,11 @@
   overflow: hidden;
   max-height: 44px;
   opacity: 1;
-  transform: translateY(0);
   transition:
     max-height 340ms ease,
     padding-top 340ms ease,
     padding-bottom 340ms ease,
-    opacity 340ms ease,
-    transform 340ms ease;
+    opacity 340ms ease;
 }
 
 .site-header.contact-collapsed .top-contact-bar {
@@ -43,7 +41,6 @@
   padding-top: 0;
   padding-bottom: 0;
   opacity: 0;
-  transform: translateY(-8px);
   pointer-events: none;
 }
 
@@ -110,12 +107,6 @@
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
   padding: 10px 0;
-  transform: translateY(0);
-  transition: transform 340ms ease;
-}
-
-.site-header.contact-collapsed .navbar {
-  transform: translateY(-4px);
 }
 
 .navbar-brand {
@@ -231,72 +222,22 @@
 }
 
 @media (max-width: 760px) {
-  /* Mobile keeps the contact bar intentionally short so the Hero remains visible early. */
   .top-contact-bar {
-    gap: 10px;
-    padding: 5px 10px;
-    font-size: 0.72rem;
-    line-height: 1.2;
-  }
-
-  .top-contact-item {
-    gap: 5px;
-    flex: 0 0 auto;
-    justify-content: center;
-  }
-
-  .contact-email,
-  .contact-location {
     display: none;
   }
 
-  .contact-phone {
-    flex: 1 1 auto;
-  }
-
-  .top-contact-icon {
-    width: 14px;
-    height: 14px;
-  }
-
-  .top-contact-icon svg {
-    width: 13px;
-    height: 13px;
-  }
-}
-
-@media (max-width: 760px) {
-  .top-contact-bar {
-    gap: 8px;
-    padding: 5px 8px;
-    font-size: 0.68rem;
-  }
-
-  .top-contact-item {
-    gap: 4px;
-  }
-
-  .top-contact-icon {
-    width: 13px;
-    height: 13px;
-  }
-
-  .top-contact-icon svg {
-    width: 12px;
-    height: 12px;
-  }
-
-  /* The nav stays in a single row while the links become a smooth dropdown panel. */
   .navbar {
     position: relative;
     justify-content: space-between;
     gap: 16px;
     width: calc(100% - 28px);
+    max-width: 100%;
     padding: 8px 0;
+    box-sizing: border-box;
   }
 
   .navbar-logo {
-    width: 88px;
+    width: 102px;
   }
 
   .navbar-toggle {

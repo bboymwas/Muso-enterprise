@@ -85,6 +85,17 @@
   .section-heading {
     font-size: 36px;
   }
+
+  .highlights-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .highlight-card {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 /* Paragraphs */

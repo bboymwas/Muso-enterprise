@@ -90,14 +90,14 @@
 
 .service-hero-btn-primary,
 .service-cta-button.primary {
-  background: var(--primary-blue);
-  color: #ffffff;
-  border: 1px solid var(--primary-blue);
+  background: var(--primary-blue) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--primary-blue) !important;
   box-shadow: 0 20px 40px rgba(0, 87, 217, 0.18);
 }
 
 .service-hero-btn-primary:hover,
-.service-cta-button.primary:hover { background: var(--dark-blue); }
+.service-cta-button.primary:hover { background: var(--dark-blue) !important; }
 
 .service-hero-btn-secondary,
 .service-cta-button.secondary {
