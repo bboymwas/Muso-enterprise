@@ -24,11 +24,6 @@ const OurStory = () => {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: 'easeOut' } },
   };
 
-  const highlights = [
-    { id: 1, icon: <FaLeaf aria-hidden="true" />, title: 'Quality Products' },
-    { id: 2, icon: <FaHandsHelping aria-hidden="true" />, title: 'Trusted Services' },
-    { id: 3, icon: <FaUsers aria-hidden="true" />, title: 'Community Empowerment' },
-  ];
 
   return (
     <section className="our-story-section" aria-label="Our Story Section">
@@ -70,20 +65,7 @@ const OurStory = () => {
           </div>
         </motion.div>
       {/* Highlights row moved here to span full grid width on desktop */}
-      <motion.div
-        className="highlights-row"
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
-        }}
-      >
-        {highlights.map((h) => (
-          <motion.div key={h.id} className="highlight-card" variants={highlightVariants}>
-            <div className="highlight-icon">{h.icon}</div>
-            <span className="highlight-title">{h.title}</span>
-          </motion.div>
-        ))}
-      </motion.div>
+      
     </motion.div>
     </section>
   );
